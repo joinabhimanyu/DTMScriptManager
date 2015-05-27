@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ConfModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ConfEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="WSDL_REPORT_CLAUSE_DTL" EntityType="ConfModel.WSDL_REPORT_CLAUSE_DTL" />
+    <EntitySet Name="WSDL_REPORT_CONDITIONAL_MST" EntityType="ConfModel.WSDL_REPORT_CONDITIONAL_MST" />
+    <EntitySet Name="WSDL_REPORT_FILE_PATH_INFO" EntityType="ConfModel.WSDL_REPORT_FILE_PATH_INFO" />
+    <EntitySet Name="WSDL_REPORT_GENISYS_WSDL" EntityType="ConfModel.WSDL_REPORT_GENISYS_WSDL" />
+    <EntitySet Name="WSDL_REPORT_IMAGE_DTL" EntityType="ConfModel.WSDL_REPORT_IMAGE_DTL" />
+    <EntitySet Name="WSDL_REPORT_MAPPING_TAB" EntityType="ConfModel.WSDL_REPORT_MAPPING_TAB" />
+    <EntitySet Name="WSDL_REPORT_MOD_RISK_MAPPING" EntityType="ConfModel.WSDL_REPORT_MOD_RISK_MAPPING" />
+    <EntitySet Name="WSDL_REPORT_PAGE_LABEL" EntityType="ConfModel.WSDL_REPORT_PAGE_LABEL" />
+    <EntitySet Name="WSDL_REPORT_PRODUCT_MST" EntityType="ConfModel.WSDL_REPORT_PRODUCT_MST" />
+    <EntitySet Name="WSDL_REPORT_RISK_MAPPING" EntityType="ConfModel.WSDL_REPORT_RISK_MAPPING" />
+    <EntitySet Name="WSDL_REPORT_SPECIAL_LABEL" EntityType="ConfModel.WSDL_REPORT_SPECIAL_LABEL" />
+    <EntitySet Name="WSDL_REPORT_TABLE_MAPPING" EntityType="ConfModel.WSDL_REPORT_TABLE_MAPPING" />
+    <AssociationSet Name="FK_WSDL_REPORT_CLAUSE_DTL" Association="ConfModel.FK_WSDL_REPORT_CLAUSE_DTL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_CLAUSE_DTL" EntitySet="WSDL_REPORT_CLAUSE_DTL" />
+    </AssociationSet>
+    <AssociationSet Name="FK1_WSDL_REPORT_CLAUSE_DTL" Association="ConfModel.FK1_WSDL_REPORT_CLAUSE_DTL">
+      <End Role="WSDL_REPORT_PAGE_LABEL" EntitySet="WSDL_REPORT_PAGE_LABEL" />
+      <End Role="WSDL_REPORT_CLAUSE_DTL" EntitySet="WSDL_REPORT_CLAUSE_DTL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_CONDITIONAL_MST" Association="ConfModel.FK_WSDL_REPORT_CONDITIONAL_MST">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_CONDITIONAL_MST" EntitySet="WSDL_REPORT_CONDITIONAL_MST" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_GENISYS_WSDL" Association="ConfModel.FK_WSDL_REPORT_GENISYS_WSDL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_GENISYS_WSDL" EntitySet="WSDL_REPORT_GENISYS_WSDL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_IMAGE_DTL" Association="ConfModel.FK_WSDL_REPORT_IMAGE_DTL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_IMAGE_DTL" EntitySet="WSDL_REPORT_IMAGE_DTL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_MAPPING_TAB" Association="ConfModel.FK_WSDL_REPORT_MAPPING_TAB">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_MAPPING_TAB" EntitySet="WSDL_REPORT_MAPPING_TAB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_PAGE_LABEL" Association="ConfModel.FK_WSDL_REPORT_PAGE_LABEL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_PAGE_LABEL" EntitySet="WSDL_REPORT_PAGE_LABEL" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="WSDL_REPORT_CLAUSE_DTL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_CONF_WSDL_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_CLAUSE_CODE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_LABEL_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_LABEL_NAME" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_COMPONENT_TYPE" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_CLAUSE_CODE" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_URL_PATH" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_IS_NEW_PAGE" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="WSDL_REPORT_PRODUCT_MST" Relationship="ConfModel.FK_WSDL_REPORT_CLAUSE_DTL" FromRole="WSDL_REPORT_CLAUSE_DTL" ToRole="WSDL_REPORT_PRODUCT_MST" />
+    <NavigationProperty Name="WSDL_REPORT_PAGE_LABEL" Relationship="ConfModel.FK1_WSDL_REPORT_CLAUSE_DTL" FromRole="WSDL_REPORT_CLAUSE_DTL" ToRole="WSDL_REPORT_PAGE_LABEL" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_CONDITIONAL_MST">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_CONF_WSDL_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_CONF_PROPERTY_NO" />
+      <PropertyRef Name="TXT_CONF_PROPERTY_NAME" />
+      <PropertyRef Name="TXT_ORIGINAL_VALUE" />
+      <PropertyRef Name="TXT_REPLACED_VALUE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_ORIGINAL_VALUE" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_REPLACED_VALUE" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="WSDL_REPORT_PRODUCT_MST" Relationship="ConfModel.FK_WSDL_REPORT_CONDITIONAL_MST" FromRole="WSDL_REPORT_CONDITIONAL_MST" ToRole="WSDL_REPORT_PRODUCT_MST" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_FILE_PATH_INFO">
+    <Key>
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="TXT_SOURCE_PATH" />
+      <PropertyRef Name="TXT_DESTINATION_PATH" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SOURCE_PATH" Type="String" Nullable="false" MaxLength="700" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_DESTINATION_PATH" Type="String" Nullable="false" MaxLength="700" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_START_DATE" Type="DateTime" />
+    <Property Name="DAT_END_DATE" Type="DateTime" />
+    <Property Name="TXT_POLICY_SHEDULE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_VEHICLE_CLASS_CODE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_RISK_VARIANT" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_GENISYS_WSDL">
+    <Key>
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_CONF_WSDL_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_CONF_PROPERTY_NO" />
+      <PropertyRef Name="TXT_CONF_PROPERTY_NAME" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="String" Nullable="false" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PROPERTY_INDEX" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PROPERTY_PARENT_INDEX" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="WSDL_REPORT_PRODUCT_MST" Relationship="ConfModel.FK_WSDL_REPORT_GENISYS_WSDL" FromRole="WSDL_REPORT_GENISYS_WSDL" ToRole="WSDL_REPORT_PRODUCT_MST" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_IMAGE_DTL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="TXT_IMAGE_TYPE" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="TXT_FILE_PATH" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_TEMPLATE_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_IMAGE_TYPE" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_FILE_PATH" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="WSDL_REPORT_PRODUCT_MST" Relationship="ConfModel.FK_WSDL_REPORT_IMAGE_DTL" FromRole="WSDL_REPORT_IMAGE_DTL" ToRole="WSDL_REPORT_PRODUCT_MST" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_MAPPING_TAB">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_MAPPING_TYPE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_ACTUAL_PAGE_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_LABEL_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_LABEL_NAME" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_MAPPING_TYPE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_YN_DEFAULT_VALUE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_DEFAULT_VALUE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_IS_WORD" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_DATE_FORMAT" Type="String" MaxLength="15" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_ZERO_REPLACE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_BLANK_REPLACE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_IS_OLD_VALUE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_RCLD_COMPONENT" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_COLL_OR_DIRECT_MAPPING" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="WSDL_REPORT_PRODUCT_MST" Relationship="ConfModel.FK_WSDL_REPORT_MAPPING_TAB" FromRole="WSDL_REPORT_MAPPING_TAB" ToRole="WSDL_REPORT_PRODUCT_MST" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_MOD_RISK_MAPPING">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_MAPPING_TYPE" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SRL_NO_PATTERN" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_LABEL_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_LABEL_NAME" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_MAPPING_TYPE" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_IS_OLD_VALUE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_RISK_GROUP_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_COVER_GROUP_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_HEADING" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_DISPLAY_SEQ_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_HEADING_IS_BOLD" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_HEADING_TEXT_ALIGMENT" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CELL_IS_BOLD" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_CELL_TEXT_ALIGMENT" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_PAGE_LABEL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_ACTUAL_PAGE_NAME" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_LABEL_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_LABEL_NAME" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="WSDL_REPORT_CLAUSE_DTL" Relationship="ConfModel.FK1_WSDL_REPORT_CLAUSE_DTL" FromRole="WSDL_REPORT_PAGE_LABEL" ToRole="WSDL_REPORT_CLAUSE_DTL" />
+    <NavigationProperty Name="WSDL_REPORT_PRODUCT_MST" Relationship="ConfModel.FK_WSDL_REPORT_PAGE_LABEL" FromRole="WSDL_REPORT_PAGE_LABEL" ToRole="WSDL_REPORT_PRODUCT_MST" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_PRODUCT_MST">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_PRODUCT_NAME" Type="String" Nullable="false" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+    <NavigationProperty Name="WSDL_REPORT_CLAUSE_DTL" Relationship="ConfModel.FK_WSDL_REPORT_CLAUSE_DTL" FromRole="WSDL_REPORT_PRODUCT_MST" ToRole="WSDL_REPORT_CLAUSE_DTL" />
+    <NavigationProperty Name="WSDL_REPORT_CONDITIONAL_MST" Relationship="ConfModel.FK_WSDL_REPORT_CONDITIONAL_MST" FromRole="WSDL_REPORT_PRODUCT_MST" ToRole="WSDL_REPORT_CONDITIONAL_MST" />
+    <NavigationProperty Name="WSDL_REPORT_GENISYS_WSDL" Relationship="ConfModel.FK_WSDL_REPORT_GENISYS_WSDL" FromRole="WSDL_REPORT_PRODUCT_MST" ToRole="WSDL_REPORT_GENISYS_WSDL" />
+    <NavigationProperty Name="WSDL_REPORT_IMAGE_DTL" Relationship="ConfModel.FK_WSDL_REPORT_IMAGE_DTL" FromRole="WSDL_REPORT_PRODUCT_MST" ToRole="WSDL_REPORT_IMAGE_DTL" />
+    <NavigationProperty Name="WSDL_REPORT_MAPPING_TAB" Relationship="ConfModel.FK_WSDL_REPORT_MAPPING_TAB" FromRole="WSDL_REPORT_PRODUCT_MST" ToRole="WSDL_REPORT_MAPPING_TAB" />
+    <NavigationProperty Name="WSDL_REPORT_PAGE_LABEL" Relationship="ConfModel.FK_WSDL_REPORT_PAGE_LABEL" FromRole="WSDL_REPORT_PRODUCT_MST" ToRole="WSDL_REPORT_PAGE_LABEL" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_RISK_MAPPING">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_MAPPING_TYPE" />
+      <PropertyRef Name="TXT_IS_WORD" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_ACTUAL_PAGE_NAME" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_LABEL_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_LABEL_NAME" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_MAPPING_TYPE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_IS_WORD" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_ZERO_REPLACE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_BLANK_REPLACE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_IS_OLD_VALUE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="YN_RISKED_MAPPED_VALUE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_RISK_COMPONENT" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="YN_COVER_MAPPED_VALUE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_COVER_COMPONENT" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="YN_LD_MAPPED_VALUE" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_LD_COMPONENT" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_RISK_GROUP_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_COVER_GROUP_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_LD_GROUP_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_RCLD_COMPONENT" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_SPECIAL_LABEL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_SERVICE_TYPE" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_PATTERN_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="NUM_LABEL_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_LABEL_NAME" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="75" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_TABLE_MAPPING">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_IS_COLUMN_VISIBLE" />
+      <PropertyRef Name="TXT_RISK_COVER" />
+      <PropertyRef Name="TXT_DISPLAY_TYPE" />
+      <PropertyRef Name="TXT_HAS_PARENT" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_PRODUCT_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_WSDL_TYPE" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_SERIAL_NO" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="NUM_LABEL_CODE" Type="Decimal" Nullable="false" Precision="38" Scale="0" />
+    <Property Name="TXT_LABEL_NAME" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_TABLE_NAME" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="NUM_COLUMN_SEQUENCE" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="TXT_IS_COLUMN_VISIBLE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_COLUMN_HEADING" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_HEADING_IS_BOLD" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_HEADING_ALIGMENT" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_HEADER_WIDTH" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_RISK_COVER" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_COLUMN_NAME" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_DATA_TYPE" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_DATA_FORMAT" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_CELL_IS_BOLD" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_CELL_ALIGMENT" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_DEFAULT_VALUE" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WHERE_CLAUSE" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_ORDER_BY" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_GROUP_FUNCTION" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_GROUP_BY" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_DISPLAY_TYPE" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+    <Property Name="TXT_WSDL_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_HAS_PARENT" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_PARENT_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_CONDITION_PROPERTY" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_WSDL_CONDITION" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_REPLACE_VALUE" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+    <Property Name="TXT_USER_ID" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+    <Property Name="DAT_INSERT_DATE" Type="DateTime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_WSDL_REPORT_CLAUSE_DTL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_CLAUSE_DTL" Type="ConfModel.WSDL_REPORT_CLAUSE_DTL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_CLAUSE_DTL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK1_WSDL_REPORT_CLAUSE_DTL">
+    <End Role="WSDL_REPORT_PAGE_LABEL" Type="ConfModel.WSDL_REPORT_PAGE_LABEL" Multiplicity="1" />
+    <End Role="WSDL_REPORT_CLAUSE_DTL" Type="ConfModel.WSDL_REPORT_CLAUSE_DTL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PAGE_LABEL">
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+        <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+        <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+        <PropertyRef Name="TXT_LABEL_NAME" />
+        <PropertyRef Name="NUM_LABEL_CODE" />
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_CLAUSE_DTL">
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+        <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+        <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+        <PropertyRef Name="TXT_LABEL_NAME" />
+        <PropertyRef Name="NUM_LABEL_CODE" />
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_CONDITIONAL_MST">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_CONDITIONAL_MST" Type="ConfModel.WSDL_REPORT_CONDITIONAL_MST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_CONDITIONAL_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_GENISYS_WSDL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_GENISYS_WSDL" Type="ConfModel.WSDL_REPORT_GENISYS_WSDL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_GENISYS_WSDL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_IMAGE_DTL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_IMAGE_DTL" Type="ConfModel.WSDL_REPORT_IMAGE_DTL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_IMAGE_DTL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_MAPPING_TAB">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_MAPPING_TAB" Type="ConfModel.WSDL_REPORT_MAPPING_TAB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_MAPPING_TAB">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_PAGE_LABEL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_PAGE_LABEL" Type="ConfModel.WSDL_REPORT_PAGE_LABEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_PAGE_LABEL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

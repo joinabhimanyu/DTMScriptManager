@@ -1,0 +1,496 @@
+﻿@{
+    ViewBag.Title = "Script Generator Page";
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>@ViewBag.title</title>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css' />
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+    @Styles.Render("~/Content/themes/base/css")
+    @Styles.Render("~/Content/css/frameworks")
+
+
+    <style type="text/css">
+        body {
+            background-color: white;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .row {
+            background-color: #fff;
+            background-position: center;
+            background-repeat: no-repeat;
+            top: 0;
+            left: 0;
+            border: 1px solid #fff;
+        }
+
+        @@font-face {
+            font-family: myFont;
+            src: '../Content/fonts/Sansation_Light.ttf';
+        }
+
+        p {
+            font-weight: bold;
+            /*font-family: 'Indie Flower', cursive;*/
+            font-family: 'Lato', sans-serif;
+        }
+
+        h2 {
+            font-family: 'Lato', sans-serif;
+            /*font-family: 'Indie Flower', cursive;*/
+            /*font-family: myFont;*/
+            font-size: 2.0em;
+            color: #34495e;
+        }
+
+        h3 {
+            font-family: 'Lato', sans-serif;
+            /*font-family: 'Indie Flower', cursive;*/
+            /*font-family: myFont;*/
+            font-size: 1.2em;
+        }
+
+        th {
+            border-bottom: 1px solid #d6d6d6;
+        }
+
+        tr:nth-child(even) {
+            background: #e9e9e9;
+        }
+
+        /*.row {
+            margin-left: 8px;
+        }*/
+
+        #frmTableData .form-group {
+            margin-left: 20px;
+        }
+
+        #search-alert {
+            display: none;
+        }
+
+        button, a {
+            font-family: 'Lato', sans-serif;
+            /*font-family: 'Indie Flower', cursive;*/
+            /*font-family: myFont;*/
+        }
+    </style>
+
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+
+    <div class="row" id="navbar-row">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="@Url.Action("Index", "ScriptGenerator")">
+                        <h2 style="color: white;">DTM Script Manager</h2>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="menu-nav">
+                    <ul class="nav navbar-nav pull-right" style="margin-top: 20px;margin-right: 20px;">
+                        @{
+                            if (Session["AuthToken"] != null)
+                            {
+                            <li><a href="@Url.Action("Logout", "ScriptGenerator")" class="btn btn-lg btn-inverse">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true" style="text-align: right;">
+                                        Logout</span>
+                                </a></li>
+                            }
+                            else
+                            {
+                            <li><a href="#" data-toggle="modal" data-target="#modalLogin" class="btn btn-lg btn-inverse">
+                                <span class="glyphicon glyphicon-off" aria-hidden="true" style="text-align: right;">
+                                        Login</span>
+                                </a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    @{
+        if (Session["AuthToken"] != null)
+        {
+        <div class="container">
+
+            <div class="row well">
+                <p class="text-danger">
+                    <span class="pull-left" style="font-weight: bold; font-size: 1.2em;">Please execute the scripts according to their respective sequence numbers.</span>
+                </p>
+            </div>
+
+            <div class="container" id="page-one">
+
+                <div class="row" id="form-row">
+                    <div class="col-md-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 style="color: white;">Search Parameters</h3>
+                            </div>
+                            <div class="panel-body">
+                                <form id="frmTableData" method="post" action="@Url.Action("PostFormData", "ScriptGenerator")">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="txtSourceSchema">Source Schema</label>
+                                                <input type="text" id="txtSourceSchema" name="txtSourceSchema" class="form-control" placeholder="Enter Source Schema" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="txtTargetSchema">Target Schema</label>
+                                                <input type="text" id="txtTargetSchema" name="txtTargetSchema" class="form-control" placeholder="Enter Target Schema" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="txtTableName">Table Name</label>
+                                                <input type="text" id="txtTableName" name="txtTableName" class="form-control" placeholder="Enter Table Name" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="txtSequenceNo">Sequence No</label>
+                                                <input type="text" id="txtSequenceNo" name="txtSequenceNo" class="form-control" readonly="true" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="txtProductCode">Product Code</label>
+                                                <input type="text" id="txtProductCode" name="txtProductCode" title="txtProductCode" pattern="\d+" class="form-control" placeholder="Enter Product Code" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="txtReportTypeCode">Report Type Code</label>
+                                                <input type="text" id="txtReportTypeCode" name="txtReportTypeCode" title="txtReportTypeCode" pattern="\d+" class="form-control" placeholder="Enter Report Type Code" />
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="txtHtmlTemplateNo">Html Template No</label>
+                                                <input type="text" id="txtHtmlTemplateNo" name="txtHtmlTemplateNo" title="txtHtmlTemplateNo" pattern="\d+" class="form-control" placeholder="Enter Html Template No" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-1" style="margin-left: 20px;">
+                                            <button type="submit" id="btnSubmit" onclick="return CheckParam();" class="btn btn-primary">View</button>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <a href="@Url.Action("Download", "ScriptGenerator")" class="btn btn-primary" onclick="return CheckDownload();">Generate Script</a>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                
+
+            </div>
+
+            <div class="alert alert-info" id="search-alert" style="width: 1147px; margin-left: 100px;">
+                <a href="#" class="close" data-dismiss="alert">&times;</a>
+                <strong>Oops!</strong>
+                <h5>Please view the data to proceed.</h5>
+            </div>
+
+        </div>
+        }
+        else
+        {
+        <!-- Modal -->
+
+        <!-- Login Modal -->
+
+        <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+            <div class="modal-dialog modal-wide">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="logint">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="well">
+
+                            <form id="frmLogin" method="post" action="@Url.Action("Login", "ScriptGenerator")">
+                                <div class="form-group">
+                                    <label for="user_id">Username</label>
+                                    <input type="text" id="user_id" name="user_id" class="form-control" placeholder="Enter user name" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter password" />
+                                </div>
+                                <input type="submit" value="Login" class="btn btn-primary" />
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+    }
+
+    @RenderBody()
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/js/frameworks")
+    @Scripts.Render("~/bundles/jqueryui")
+
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+
+        function CheckParam() {
+            var return_param;
+
+            if (!$("#txtSourceSchema").val()) {
+                alertify.error("Please enter source schema to proceed");
+                return_param = false;
+            }
+            else {
+                if (!$("#txtTargetSchema").val()) {
+                    alertify.error("Please enter target schema to proceed");
+                    return_param = false;
+                }
+                else {
+                    if (!$("#txtTableName").val()) {
+                        alertify.error("Please enter table name to proceed");
+                        return_param = false;
+                    }
+                    else {
+                        if (!$("#txtProductCode").val()) {
+                            alertify.error("Please enter product code to proceed");
+                            return_param = false;
+                        }
+                        else {
+                            return_param = true;
+                        }
+                    }
+                }
+            }
+            return return_param;
+        }
+
+        function CheckDownload() {
+            //alert("error");
+            var data = '@Session["TableData"]';
+            var data_count;
+
+            @{
+                if (Session["TableData"] != null)
+                {
+                    <text>data_count = '@(((IEnumerable<object>)Session["TableData"]).Count())';</text>
+                }
+                }
+
+            if (!data || data_count == 0) {
+                $("#search-alert").fadeIn(1000).delay(1350);
+                return false;
+            }
+            else {
+                $("#search-alert").hide();
+                return true;
+            }
+        }
+
+        $(document).ready(function () {
+
+            (function () {
+
+                @{
+                    if (Session["ProductCode"] != null)
+                    {
+                        <text>
+                $("#txtProductCode").val('@Session["ProductCode"].ToString().Trim()');
+                        </text>
+                    }
+                    if (Session["SequenceNo"] != null)
+                    {
+                        <text>
+                $("#txtSequenceNo").val('@Session["SequenceNo"].ToString().Trim()');
+                        </text>
+                    }
+                    if (Session["ReportTypeCode"] != null)
+                    {
+                        <text>
+                $("#txtReportTypeCode").val('@Session["ReportTypeCode"].ToString().Trim()');
+                        </text>
+                    }
+                    if (Session["HtmlTemplateNo"] != null)
+                    {
+                        <text>
+                $("#txtHtmlTemplateNo").val('@Session["HtmlTemplateNo"].ToString().Trim()');
+                        </text>
+                    }
+                    if (Session["TableType"] != null)
+                    {
+                        <text>
+                $("#txtTableName").val('@Session["TableType"].ToString().Trim()');
+                        </text>
+                    }
+                    if (Session["SourceSchema"] != null)
+                    {
+                        <text>
+                $("#txtSourceSchema").val('@Session["SourceSchema"].ToString().Trim()');
+                        </text>
+                    }
+                    if (Session["TargetSchema"] != null)
+                    {
+                        <text>
+                $("#txtTargetSchema").val('@Session["TargetSchema"].ToString().Trim()');
+                        </text>
+                    }
+                    }
+
+            })();
+
+            $("#txtSourceSchema").autocomplete({
+                source: function (request, response) {
+                    var schema_name = $("#txtSourceSchema").val();
+                    var data = { schema_name: schema_name };
+                    $.ajax({
+                        url: '@Url.Action("GetSchemas", "ScriptGenerator")',
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function (response_data) {
+                            response($.map(response_data, function (item) {
+                                return {
+                                    label: item.schema_name,
+                                    value: item.schema_name
+                                };
+                            }));
+                        }
+                    });
+                }
+            });
+
+            $("#txtTargetSchema").autocomplete({
+                source: function (request, response) {
+                    var schema_name = $("#txtTargetSchema").val();
+                    var data = { schema_name: schema_name };
+                    $.ajax({
+                        url: '@Url.Action("GetSchemas", "ScriptGenerator")',
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function (response_data) {
+                            response($.map(response_data, function (item) {
+                                return {
+                                    label: item.schema_name,
+                                    value: item.schema_name
+                                };
+                            }));
+                        }
+                    });
+                }
+            });
+
+            $("#txtTableName").autocomplete({
+                source: function (request, response) {
+                    var table_name = $("#txtTableName").val();
+                    var data = { table_name: table_name };
+                    $.ajax({
+                        url: '@Url.Action("GetTableName", "ScriptGenerator")',
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        contentType: 'application/json',
+                        dataType: 'json',
+                        success: function (response_data) {
+                            response($.map(response_data, function (item) {
+                                return {
+                                    label: item.table_name,
+                                    value: item.table_name
+                                };
+                            }));
+                        }
+                    });
+                }
+            });
+
+            $("#txtTableName").focusout(function () {
+                var table_name = $(this).val();
+
+                if (table_name == "wsdl_report_product_mst") {
+                    $("#txtReportTypeCode").attr('readonly', 'readonly');
+                    $("#txtHtmlTemplateNo").attr('readonly', 'readonly');
+                }
+                else {
+                    if (table_name == "wsdl_report_genisys_wsdl") {
+                        $("#txtReportTypeCode").attr('readonly', 'readonly');
+                        $("#txtHtmlTemplateNo").attr('readonly', 'readonly');
+                    }
+                    else {
+                        $("#txtReportTypeCode").removeAttr('readonly');
+                        $("#txtHtmlTemplateNo").removeAttr('readonly');
+                    }
+                }
+
+                var data = { table_name: table_name };
+                $.ajax({
+                    url: '@Url.Action("GetTableSequenceNo", "ScriptGenerator")',
+                    type: 'POST',
+                    data: JSON.stringify(data),
+                    contentType: 'application/json',
+                    dataType: 'json',
+                    success: function (response) {
+                        $("#txtSequenceNo").val(response.sequence_no);
+                    },
+                    error: function (xhr, ajaxOptions, thrownError) {
+                        alertify.error(xhr.status + " " + thrownError);
+                    }
+                });
+            });
+
+
+        });
+
+
+
+    </script>
+
+</body>
+</html>

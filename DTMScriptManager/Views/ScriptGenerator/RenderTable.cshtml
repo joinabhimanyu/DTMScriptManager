@@ -1,0 +1,88 @@
+﻿@model DTMScriptManager.Models.PagedDataModel
+
+@using System.Web.Helpers;
+
+@{
+    ViewBag.Title = "RenderTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var grid = new WebGrid(rowsPerPage: Model.PageSize, canSort: false);
+    grid.Bind(Model.obj, autoSortAndPage: false, rowCount: Model.TotalRows);
+}
+
+@section styles {
+    <style type="text/css">
+
+        .table {
+            
+            width: 100%;
+            max-width: 100%;
+        }
+
+        #table-row {
+            margin-left: 3px;
+            display: none;
+            overflow: auto;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .alert {
+            display: none;
+        }
+
+
+    </style>
+}
+
+@if (Model.obj.Count() > 0)
+{
+    <div class="container">
+    <div class="row well" id="table-row">
+
+    @grid.GetHtml(
+    tableStyle: "table table-responsive table-bordered",
+    headerStyle: "table-primary",
+    mode: WebGridPagerModes.All,
+    firstText: "<< First",
+    previousText: "< Prev",
+    nextText: "Next >",
+    lastText: "Last >>"
+    )
+
+</div>
+</div>
+}
+
+
+   <div class="alert alert-info" id="result-alert">
+    <a href="#" class="close" data-dismiss="alert">&times;</a>
+    <strong>Oops!</strong> <h5> No data found matching the criteria.</h5>
+</div> 
+
+
+
+
+@section scripts {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            
+            $("#table-row").fadeIn(1000).delay(1350);
+            
+            $("#table-row .table a").addClass('label');
+            $("#table-row .table a").addClass('label-primary');
+
+            (function () {
+
+                var model_count = '@Model.obj.Count()';
+                if (model_count == 0) {
+                    $("#result-alert").fadeIn(1000).delay(1350);
+                }
+                else {
+                    $("#result-alert").hide();
+                }
+            })();
+
+        });
+    </script>
+}

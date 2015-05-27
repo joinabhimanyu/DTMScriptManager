@@ -1,0 +1,1624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/GenericMasterBL" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/GeneralServiceBL" />
+  <xs:element name="GetCustomerRoleList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerRoleListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCustomerRoleListResult" nillable="true" type="q1:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalutationList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSalutationListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetSalutationListResult" nillable="true" type="q2:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsuredDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInsuredDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetInsuredDetailsResult" nillable="true" type="q3:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalDataForCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalDataForCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetApprovalDataForCustomerResult" nillable="true" type="q4:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPopUpValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVQry" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPopUpValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetPopUpValuesResult" nillable="true" type="q5:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCustomerHistoryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntrEmpTag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCustomerHistoryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVCustomerHistoryDataResult" nillable="true" type="q6:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVDuplicateCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVCustomer" nillable="true" type="q7:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVDuplicateCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVDuplicateCustomerResult" nillable="true" type="q8:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVParentCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAreaVillageName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrictName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStateName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVInterEmpTag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVEmployeeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVParentCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVParentCustomerResult" nillable="true" type="q9:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVEmployeeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEmployeeResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objEmployee" nillable="true" type="q10:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddEmployeeResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objEmployee" nillable="true" type="q11:Employee" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditEmployeeResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVEmployee">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEmployeeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDesignation" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEmployeeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEmployeeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOfficeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolShowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVEmployeeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVEmployeeResult" nillable="true" type="q12:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndustryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndustryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIndustryListResult" nillable="true" type="q13:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCountry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCountryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCountryName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCountryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVCountryResult" nillable="true" type="q14:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProposalInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="ObjLVShowlovValue" type="q15:LovFetchInput" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchProposalInformationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="FetchProposalInformationResult" nillable="true" type="q16:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOccupationList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOccupationListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetOccupationListResult" nillable="true" type="q17:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchQualityForNewProposal">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strProposalNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StrTransactionDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tarnsactionType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="TodayDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProductCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchQualityForNewProposalResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="FetchQualityForNewProposalResult" nillable="true" type="q18:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProposalRelatedData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strWorkFlowID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProposalRelatedDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetProposalRelatedDataResult" nillable="true" type="q19:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankAccountType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBankAccountTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetBankAccountTypeResult" nillable="true" type="q20:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVBankBranch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBankCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBankBranchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBankBranchName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVBankBranchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVBankBranchResult" nillable="true" type="q21:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCountryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCountryListResult" nillable="true" type="q22:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStateName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCountryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolLVShowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetRegionListResult" nillable="true" type="q23:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPerRegionList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStateName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCountryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolLVShowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPerRegionListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetPerRegionListResult" nillable="true" type="q24:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objCityDistrict" nillable="true" type="q25:CityDistrictMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDistrictListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetDistrictListResult" nillable="true" type="q26:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objCityDistrict" nillable="true" type="q27:CityDistrictMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCityListResult" nillable="true" type="q28:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityDistrictList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objCityDistrict" nillable="true" type="q29:CityDistrictMaster" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityDistrictListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCityDistrictListResult" nillable="true" type="q30:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Master" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PinNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="IsVAlidated" type="xs:boolean" />
+        <xs:element minOccurs="0" name="Code" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="ValidatePinResult" nillable="true" type="q31:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPinCodeAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVState" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrict" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPinCodeAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVPinCodeAddressResult" nillable="true" type="q32:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLocationCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetLocationResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVLocation" nillable="true" type="q33:Location" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="AddLocationResult" nillable="true" type="q34:Location" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVLocation" nillable="true" type="q35:Location" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EditLocationResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVLocationCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAddress1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAddress2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAddress3" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrict" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVState" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVAddressResult" nillable="true" type="q36:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntermediaryCategoryList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntermediaryCategoryListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIntermediaryCategoryListResult" nillable="true" type="q37:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParentRelationList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryCategoryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParentRelationListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetParentRelationListResult" nillable="true" type="q38:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntermediary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntermediaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIntermediaryResult" nillable="true" type="q39:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsLicenseRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryRole" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsLicenseRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIsLicenseRequiredResult" nillable="true" type="q40:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsLicenseReqRoleWise">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryRole" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsLicenseReqRoleWiseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIsLicenseReqRoleWiseResult" nillable="true" type="q41:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseDate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLicenseNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLicenseDateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLicenseDateResult" nillable="true" type="q42:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsSourceBankApplicable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryRole" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsSourceBankApplicableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetIsSourceBankApplicableResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryChangeCount">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryChangeCountResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCategoryChangeCountResult" nillable="true" type="q43:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsMultiUserRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryRole" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsMultiUserRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIsMultiUserRequiredResult" nillable="true" type="q44:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDealerFlag">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVDealer" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDealerFlagResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetDealerFlagResult" nillable="true" type="q45:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsIdentityNumRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryRole" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsIdentityNumRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIsIdentityNumRequiredResult" nillable="true" type="q46:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalDataForIntermediary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApprovalDataForIntermediaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetApprovalDataForIntermediaryResult" nillable="true" type="q47:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIntermediary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objIntermediary" nillable="true" type="q48:Intermediary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIntermediaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="AddIntermediaryResult" nillable="true" type="q49:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditIntermediary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objIntermediary" nillable="true" type="q50:Intermediary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditIntermediaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="EditIntermediaryResult" nillable="true" type="q51:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsServiceTaxRequired">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryRole" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIsServiceTaxRequiredResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetIsServiceTaxRequiredResult" nillable="true" type="q52:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntermediary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryRole" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryCity" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryPincode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryPinLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryState" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolLVShowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntermediaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVIntermediaryResult" nillable="true" type="q53:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntrHistoryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntrHistoryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVIntrHistoryDataResult" nillable="true" type="q54:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntermediaryType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryTypeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntermediaryTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVIntermediaryTypeResult" nillable="true" type="q55:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntrLicense">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVLicenseNo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntrCategoryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVIntrLicenseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVIntrLicenseResult" nillable="true" type="q56:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPartner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPartnerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPartnerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntrCategoryID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPartnerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVPartnerResult" nillable="true" type="q57:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSourceBankMapID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryRole" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVSelectedSourceBankID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSourceBankMapIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetSourceBankMapIDResult" nillable="true" type="q58:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVParentIntermediary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntremediaryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAreaVillageName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrict" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVState" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVInterEmptag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVEmployeeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVParentIntermediaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVParentIntermediaryResult" nillable="true" type="q59:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAssociatedAgent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntremediaryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntermediaryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAreaVillageName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrict" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVState" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVInterEmptag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVEmployeeID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAssociatedAgentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVAssociatedAgentResult" nillable="true" type="q60:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPayLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrictName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPayLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVPayLocationResult" nillable="true" type="q61:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDuplicateIntermediary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDOB" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPinCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDuplicateIntermediaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetDuplicateIntermediaryResult" nillable="true" type="q62:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVOffice" nillable="true" type="q63:Office" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="AddOfficeResult" nillable="true" type="q64:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVOffice" nillable="true" type="q65:Office" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="EditOfficeResult" nillable="true" type="q66:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVOfficeHistoryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVOfficeCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVOfficeHistoryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVOfficeHistoryDataResult" nillable="true" type="q67:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDuplicateCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCustomerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDuplicateCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetDuplicateCustomerResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strUserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserDetailsResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagWithUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strIntermediaryID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCustomerID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strInterEmpTag" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TagWithUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TagWithUserResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Authenticate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAuthorized">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Section" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsAuthorizedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsAuthorizedResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchQualityCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strProposalNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FetchQualityCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="FetchQualityCheckResult" nillable="true" type="q68:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveQualityCheckWF">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objQualityCheck" nillable="true" type="q69:QualityCheck" />
+        <xs:element xmlns:q70="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dicLVWFParams" nillable="true" type="q70:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveQualityCheckWFResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/GeneralServiceBL" minOccurs="0" name="SaveQualityCheckWFResult" nillable="true" type="q71:GeneralServiceResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveQualityCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objQualityCheck" nillable="true" type="q72:QualityCheck" />
+        <xs:element xmlns:q73="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="dicProcessFlowParams" nillable="true" type="q73:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveQualityCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="SaveQualityCheckResult" nillable="true" type="q74:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchQualityCheck">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSearchProposalNo" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchQualityCheckResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="SearchQualityCheckResult" nillable="true" type="q75:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCustomerResult" nillable="true" type="q76:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerMaster">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerMasterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCustomerMasterResult" nillable="true" type="q77:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objCVCustomer" nillable="true" type="q78:Customer" />
+        <xs:element minOccurs="0" name="boolInsertDuplicate" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddCustomerResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objCVCustomer" nillable="true" type="q79:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="EditCustomerResult" nillable="true" type="q80:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDuplicateCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objCVCustomer" nillable="true" type="q81:Customer" />
+        <xs:element minOccurs="0" name="AddCustomerIfNotDuplicate" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckDuplicateCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="CheckDuplicateCustomerResult" nillable="true" type="q82:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCustomerType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVState" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrict" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAreaVillage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPincode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPincodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVIntrEmpTag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVUserId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVCustomerResult" nillable="true" type="q83:GenericResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVLocation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAddressLine1" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAddressLine2" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStreet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVApartment" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPincode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVAreaVillageCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVLocationCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVLocationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVLocationResult" nillable="true" type="q84:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolShowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVStateResult" nillable="true" type="q85:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOfficeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOfficeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strOfficeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolShowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVOfficeResult" nillable="true" type="q86:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOffice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVOfficeCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="StrCountryCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOfficeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOfficeResult" nillable="true" type="xs:anyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCityDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCityDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCityDistrictName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCityDistrictFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strEQZone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strRSMDZone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strSTFIZone" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolshowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCityDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVCityDistrictResult" nillable="true" type="q87:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAreaVillage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAreaVillageCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAreaVillageName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCityDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strRuralUrbanFlag" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolshowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAreaVillageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVAreaVillageResult" nillable="true" type="q88:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVPinCodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVCityDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="boolLVshowall" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVPinResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVPinResult" nillable="true" type="q89:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVBank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBankName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strBankCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVBankResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVBankResult" nillable="true" type="q90:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVState" nillable="true" type="q91:State" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="AddStateResult" nillable="true" type="q92:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVState" nillable="true" type="q93:State" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="EditStateResult" nillable="true" type="q94:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStartTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetStateResult" nillable="true" type="q95:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRegionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetRegionResult" nillable="true" type="q96:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVStateHistoryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVStateHistoryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVStateHistoryDataResult" nillable="true" type="q97:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVCityDistrict" nillable="true" type="q98:CityDistrict" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddCityDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="AddCityDistrictResult" nillable="true" type="q99:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCityDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVCityDistrict" nillable="true" type="q100:CityDistrict" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditCityDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="EditCityDistrictResult" nillable="true" type="q101:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityDistrict">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCityDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCityDistrictResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetCityDistrictResult" nillable="true" type="q102:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCityDistrictHistoryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strCityDistrictCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVCityDistrictHistoryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVCityDistrictHistoryDataResult" nillable="true" type="q103:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAreaVillage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVAreaVillage" nillable="true" type="q104:AreaVillage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddAreaVillageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="AddAreaVillageResult" nillable="true" type="q105:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditAreaVillage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVAreaVillage" nillable="true" type="q106:AreaVillage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditAreaVillageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="EditAreaVillageResult" nillable="true" type="q107:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaVillage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAreaVillageCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAreaVillageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetAreaVillageResult" nillable="true" type="q108:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAreaVillageHistoryData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strAreaVillageCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLOVAreaVillageHistoryDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetLOVAreaVillageHistoryDataResult" nillable="true" type="q109:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPinCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVPinCode" nillable="true" type="q110:Pincode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPinCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="AddPinCodeResult" nillable="true" type="q111:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPinCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element xmlns:q112="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="objLVPinCode" nillable="true" type="q112:Pincode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EditPinCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="EditPinCodeResult" nillable="true" type="q113:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPinCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strLVTokenID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strStateCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strDistrictCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPinCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strPinCodeLocality" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartDate" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="strLVStartTime" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPinCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/GenericMasterBL" minOccurs="0" name="GetPinCodeResult" nillable="true" type="q114:GenericMasterResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

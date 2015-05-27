@@ -1,0 +1,2815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="GenericService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="EndPointHTTPGeneric1_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <msb:BinaryEncoding xmlns:msb="http://schemas.microsoft.com/ws/06/2004/mspolicy/netbinary1" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GenericMasterBL" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/GeneralServiceBL" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IGenericService_GetCustomerRoleList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerRoleList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCustomerRoleList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerRoleListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetSalutationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalutationList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetSalutationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSalutationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetInsuredDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuredDetails" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetInsuredDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsuredDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetApprovalDataForCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovalDataForCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetApprovalDataForCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovalDataForCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetPopUpValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPopUpValues" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetPopUpValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPopUpValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCustomerHistoryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCustomerHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCustomerHistoryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCustomerHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVDuplicateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVDuplicateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVDuplicateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVDuplicateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVParentCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVParentCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVParentCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVParentCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVEmployee_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVEmployee" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVEmployee_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIndustryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndustryList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIndustryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndustryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCountry_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCountry" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCountry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCountryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_FetchProposalInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProposalInformation" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_FetchProposalInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchProposalInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetOccupationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOccupationList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetOccupationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOccupationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_FetchQualityForNewProposal_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchQualityForNewProposal" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_FetchQualityForNewProposal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchQualityForNewProposalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetProposalRelatedData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProposalRelatedData" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetProposalRelatedData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProposalRelatedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetBankAccountType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankAccountType" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetBankAccountType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBankAccountTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVBankBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVBankBranch" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVBankBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVBankBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCountryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCountryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCountryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetRegionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetRegionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetPerRegionList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerRegionList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetPerRegionList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPerRegionListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDistrictList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDistrictList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDistrictListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCityDistrictList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityDistrictList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCityDistrictList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityDistrictListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_ValidatePin_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePin" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_ValidatePin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPinCodeAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPinCodeAddress" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPinCodeAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPinCodeAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocation" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLocation" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditLocation" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAddress" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIntermediaryCategoryList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntermediaryCategoryList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIntermediaryCategoryList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntermediaryCategoryListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetParentRelationList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParentRelationList" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetParentRelationList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParentRelationListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIntermediary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntermediary" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIntermediary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntermediaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsLicenseRequired_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsLicenseRequired" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsLicenseRequired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsLicenseRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsLicenseReqRoleWise_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsLicenseReqRoleWise" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsLicenseReqRoleWise_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsLicenseReqRoleWiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLicenseDate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseDate" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLicenseDate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLicenseDateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsSourceBankApplicable_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsSourceBankApplicable" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsSourceBankApplicable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsSourceBankApplicableResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCategoryChangeCount_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryChangeCount" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCategoryChangeCount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCategoryChangeCountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsMultiUserRequired_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsMultiUserRequired" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsMultiUserRequired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsMultiUserRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDealerFlag_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDealerFlag" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDealerFlag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDealerFlagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsIdentityNumRequired_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsIdentityNumRequired" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsIdentityNumRequired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsIdentityNumRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetApprovalDataForIntermediary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovalDataForIntermediary" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetApprovalDataForIntermediary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApprovalDataForIntermediaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddIntermediary_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddIntermediary" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddIntermediary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddIntermediaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditIntermediary_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditIntermediary" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditIntermediary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditIntermediaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsServiceTaxRequired_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsServiceTaxRequired" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetIsServiceTaxRequired_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIsServiceTaxRequiredResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntermediary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntermediary" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntermediary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntermediaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntrHistoryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntrHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntrHistoryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntrHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntermediaryType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntermediaryType" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntermediaryType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntermediaryTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntrLicense_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntrLicense" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVIntrLicense_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVIntrLicenseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPartner_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPartner" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPartner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPartnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetSourceBankMapID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceBankMapID" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetSourceBankMapID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSourceBankMapIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVParentIntermediary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVParentIntermediary" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVParentIntermediary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVParentIntermediaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAssociatedAgent_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAssociatedAgent" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAssociatedAgent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAssociatedAgentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPayLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPayLocation" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPayLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPayLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDuplicateIntermediary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDuplicateIntermediary" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDuplicateIntermediary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDuplicateIntermediaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOffice" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditOffice" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVOfficeHistoryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVOfficeHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVOfficeHistoryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVOfficeHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDuplicateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDuplicateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetDuplicateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDuplicateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetUserDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetails" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetUserDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_TagWithUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:TagWithUser" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_TagWithUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TagWithUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_Authenticate_InputMessage">
+    <wsdl:part name="parameters" element="tns:Authenticate" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_Authenticate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_IsAuthorized_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsAuthorized" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_IsAuthorized_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsAuthorizedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_FetchQualityCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchQualityCheck" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_FetchQualityCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchQualityCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_SaveQualityCheckWF_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQualityCheckWF" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_SaveQualityCheckWF_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQualityCheckWFResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_SaveQualityCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQualityCheck" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_SaveQualityCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveQualityCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_SearchQualityCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchQualityCheck" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_SearchQualityCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchQualityCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCustomerMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerMaster" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCustomerMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_CheckDuplicateCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDuplicateCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_CheckDuplicateCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckDuplicateCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVLocation" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVState" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVOffice" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetOffice_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOffice" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetOffice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOfficeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCityDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCityDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCityDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCityDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAreaVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAreaVillage" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAreaVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAreaVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPin_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPin" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVPin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVPinResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVBank_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVBank" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVBank_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVBankResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddState_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddState" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditState_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditState" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetState" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetRegion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegion" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetRegion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRegionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVStateHistoryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVStateHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVStateHistoryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVStateHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddCityDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddCityDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCityDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditCityDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditCityDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditCityDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditCityDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCityDistrict_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityDistrict" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetCityDistrict_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCityDistrictResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCityDistrictHistoryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCityDistrictHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVCityDistrictHistoryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVCityDistrictHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddAreaVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAreaVillage" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddAreaVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAreaVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditAreaVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditAreaVillage" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditAreaVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditAreaVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetAreaVillage_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaVillage" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetAreaVillage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAreaVillageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAreaVillageHistoryData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAreaVillageHistoryData" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetLOVAreaVillageHistoryData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLOVAreaVillageHistoryDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddPinCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPinCode" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_AddPinCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPinCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditPinCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditPinCode" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_EditPinCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditPinCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetPinCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPinCode" />
+  </wsdl:message>
+  <wsdl:message name="IGenericService_GetPinCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPinCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IGenericService">
+    <wsdl:operation name="GetCustomerRoleList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCustomerRoleList" message="tns:IGenericService_GetCustomerRoleList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCustomerRoleListResponse" message="tns:IGenericService_GetCustomerRoleList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSalutationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetSalutationList" message="tns:IGenericService_GetSalutationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetSalutationListResponse" message="tns:IGenericService_GetSalutationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuredDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetInsuredDetails" message="tns:IGenericService_GetInsuredDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetInsuredDetailsResponse" message="tns:IGenericService_GetInsuredDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalDataForCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetApprovalDataForCustomer" message="tns:IGenericService_GetApprovalDataForCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetApprovalDataForCustomerResponse" message="tns:IGenericService_GetApprovalDataForCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPopUpValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetPopUpValues" message="tns:IGenericService_GetPopUpValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetPopUpValuesResponse" message="tns:IGenericService_GetPopUpValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCustomerHistoryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVCustomerHistoryData" message="tns:IGenericService_GetLOVCustomerHistoryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVCustomerHistoryDataResponse" message="tns:IGenericService_GetLOVCustomerHistoryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVDuplicateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVDuplicateCustomer" message="tns:IGenericService_GetLOVDuplicateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVDuplicateCustomerResponse" message="tns:IGenericService_GetLOVDuplicateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVParentCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVParentCustomer" message="tns:IGenericService_GetLOVParentCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVParentCustomerResponse" message="tns:IGenericService_GetLOVParentCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetEmployee" message="tns:IGenericService_GetEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetEmployeeResponse" message="tns:IGenericService_GetEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddEmployee" message="tns:IGenericService_AddEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddEmployeeResponse" message="tns:IGenericService_AddEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditEmployee" message="tns:IGenericService_EditEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditEmployeeResponse" message="tns:IGenericService_EditEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVEmployee">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVEmployee" message="tns:IGenericService_GetLOVEmployee_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVEmployeeResponse" message="tns:IGenericService_GetLOVEmployee_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndustryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIndustryList" message="tns:IGenericService_GetIndustryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIndustryListResponse" message="tns:IGenericService_GetIndustryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCountry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVCountry" message="tns:IGenericService_GetLOVCountry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVCountryResponse" message="tns:IGenericService_GetLOVCountry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchProposalInformation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/FetchProposalInformation" message="tns:IGenericService_FetchProposalInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/FetchProposalInformationResponse" message="tns:IGenericService_FetchProposalInformation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOccupationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetOccupationList" message="tns:IGenericService_GetOccupationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetOccupationListResponse" message="tns:IGenericService_GetOccupationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchQualityForNewProposal">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/FetchQualityForNewProposal" message="tns:IGenericService_FetchQualityForNewProposal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/FetchQualityForNewProposalResponse" message="tns:IGenericService_FetchQualityForNewProposal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalRelatedData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetProposalRelatedData" message="tns:IGenericService_GetProposalRelatedData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetProposalRelatedDataResponse" message="tns:IGenericService_GetProposalRelatedData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetBankAccountType" message="tns:IGenericService_GetBankAccountType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetBankAccountTypeResponse" message="tns:IGenericService_GetBankAccountType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVBankBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVBankBranch" message="tns:IGenericService_GetLOVBankBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVBankBranchResponse" message="tns:IGenericService_GetLOVBankBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCountryList" message="tns:IGenericService_GetCountryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCountryListResponse" message="tns:IGenericService_GetCountryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetRegionList" message="tns:IGenericService_GetRegionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetRegionListResponse" message="tns:IGenericService_GetRegionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPerRegionList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetPerRegionList" message="tns:IGenericService_GetPerRegionList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetPerRegionListResponse" message="tns:IGenericService_GetPerRegionList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetDistrictList" message="tns:IGenericService_GetDistrictList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetDistrictListResponse" message="tns:IGenericService_GetDistrictList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCityList" message="tns:IGenericService_GetCityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCityListResponse" message="tns:IGenericService_GetCityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCityDistrictList" message="tns:IGenericService_GetCityDistrictList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCityDistrictListResponse" message="tns:IGenericService_GetCityDistrictList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/ValidatePin" message="tns:IGenericService_ValidatePin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/ValidatePinResponse" message="tns:IGenericService_ValidatePin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPinCodeAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVPinCodeAddress" message="tns:IGenericService_GetLOVPinCodeAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVPinCodeAddressResponse" message="tns:IGenericService_GetLOVPinCodeAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLocation" message="tns:IGenericService_GetLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLocationResponse" message="tns:IGenericService_GetLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddLocation" message="tns:IGenericService_AddLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddLocationResponse" message="tns:IGenericService_AddLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditLocation" message="tns:IGenericService_EditLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditLocationResponse" message="tns:IGenericService_EditLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVAddress" message="tns:IGenericService_GetLOVAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVAddressResponse" message="tns:IGenericService_GetLOVAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntermediaryCategoryList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIntermediaryCategoryList" message="tns:IGenericService_GetIntermediaryCategoryList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIntermediaryCategoryListResponse" message="tns:IGenericService_GetIntermediaryCategoryList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParentRelationList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetParentRelationList" message="tns:IGenericService_GetParentRelationList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetParentRelationListResponse" message="tns:IGenericService_GetParentRelationList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntermediary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIntermediary" message="tns:IGenericService_GetIntermediary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIntermediaryResponse" message="tns:IGenericService_GetIntermediary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsLicenseRequired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIsLicenseRequired" message="tns:IGenericService_GetIsLicenseRequired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIsLicenseRequiredResponse" message="tns:IGenericService_GetIsLicenseRequired_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsLicenseReqRoleWise">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIsLicenseReqRoleWise" message="tns:IGenericService_GetIsLicenseReqRoleWise_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIsLicenseReqRoleWiseResponse" message="tns:IGenericService_GetIsLicenseReqRoleWise_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLicenseDate" message="tns:IGenericService_GetLicenseDate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLicenseDateResponse" message="tns:IGenericService_GetLicenseDate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSourceBankApplicable">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIsSourceBankApplicable" message="tns:IGenericService_GetIsSourceBankApplicable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIsSourceBankApplicableResponse" message="tns:IGenericService_GetIsSourceBankApplicable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryChangeCount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCategoryChangeCount" message="tns:IGenericService_GetCategoryChangeCount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCategoryChangeCountResponse" message="tns:IGenericService_GetCategoryChangeCount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsMultiUserRequired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIsMultiUserRequired" message="tns:IGenericService_GetIsMultiUserRequired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIsMultiUserRequiredResponse" message="tns:IGenericService_GetIsMultiUserRequired_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerFlag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetDealerFlag" message="tns:IGenericService_GetDealerFlag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetDealerFlagResponse" message="tns:IGenericService_GetDealerFlag_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsIdentityNumRequired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIsIdentityNumRequired" message="tns:IGenericService_GetIsIdentityNumRequired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIsIdentityNumRequiredResponse" message="tns:IGenericService_GetIsIdentityNumRequired_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalDataForIntermediary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetApprovalDataForIntermediary" message="tns:IGenericService_GetApprovalDataForIntermediary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetApprovalDataForIntermediaryResponse" message="tns:IGenericService_GetApprovalDataForIntermediary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddIntermediary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddIntermediary" message="tns:IGenericService_AddIntermediary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddIntermediaryResponse" message="tns:IGenericService_AddIntermediary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditIntermediary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditIntermediary" message="tns:IGenericService_EditIntermediary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditIntermediaryResponse" message="tns:IGenericService_EditIntermediary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIsServiceTaxRequired">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetIsServiceTaxRequired" message="tns:IGenericService_GetIsServiceTaxRequired_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetIsServiceTaxRequiredResponse" message="tns:IGenericService_GetIsServiceTaxRequired_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntermediary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntermediary" message="tns:IGenericService_GetLOVIntermediary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntermediaryResponse" message="tns:IGenericService_GetLOVIntermediary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntrHistoryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntrHistoryData" message="tns:IGenericService_GetLOVIntrHistoryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntrHistoryDataResponse" message="tns:IGenericService_GetLOVIntrHistoryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntermediaryType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntermediaryType" message="tns:IGenericService_GetLOVIntermediaryType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntermediaryTypeResponse" message="tns:IGenericService_GetLOVIntermediaryType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntrLicense">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntrLicense" message="tns:IGenericService_GetLOVIntrLicense_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVIntrLicenseResponse" message="tns:IGenericService_GetLOVIntrLicense_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPartner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVPartner" message="tns:IGenericService_GetLOVPartner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVPartnerResponse" message="tns:IGenericService_GetLOVPartner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSourceBankMapID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetSourceBankMapID" message="tns:IGenericService_GetSourceBankMapID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetSourceBankMapIDResponse" message="tns:IGenericService_GetSourceBankMapID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVParentIntermediary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVParentIntermediary" message="tns:IGenericService_GetLOVParentIntermediary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVParentIntermediaryResponse" message="tns:IGenericService_GetLOVParentIntermediary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAssociatedAgent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVAssociatedAgent" message="tns:IGenericService_GetLOVAssociatedAgent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVAssociatedAgentResponse" message="tns:IGenericService_GetLOVAssociatedAgent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPayLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVPayLocation" message="tns:IGenericService_GetLOVPayLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVPayLocationResponse" message="tns:IGenericService_GetLOVPayLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicateIntermediary">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetDuplicateIntermediary" message="tns:IGenericService_GetDuplicateIntermediary_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetDuplicateIntermediaryResponse" message="tns:IGenericService_GetDuplicateIntermediary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddOffice" message="tns:IGenericService_AddOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddOfficeResponse" message="tns:IGenericService_AddOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditOffice" message="tns:IGenericService_EditOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditOfficeResponse" message="tns:IGenericService_EditOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVOfficeHistoryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVOfficeHistoryData" message="tns:IGenericService_GetLOVOfficeHistoryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVOfficeHistoryDataResponse" message="tns:IGenericService_GetLOVOfficeHistoryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetDuplicateCustomer" message="tns:IGenericService_GetDuplicateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetDuplicateCustomerResponse" message="tns:IGenericService_GetDuplicateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetUserDetails" message="tns:IGenericService_GetUserDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetUserDetailsResponse" message="tns:IGenericService_GetUserDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TagWithUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/TagWithUser" message="tns:IGenericService_TagWithUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/TagWithUserResponse" message="tns:IGenericService_TagWithUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/Authenticate" message="tns:IGenericService_Authenticate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AuthenticateResponse" message="tns:IGenericService_Authenticate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthorized">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/IsAuthorized" message="tns:IGenericService_IsAuthorized_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/IsAuthorizedResponse" message="tns:IGenericService_IsAuthorized_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchQualityCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/FetchQualityCheck" message="tns:IGenericService_FetchQualityCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/FetchQualityCheckResponse" message="tns:IGenericService_FetchQualityCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveQualityCheckWF">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/SaveQualityCheckWF" message="tns:IGenericService_SaveQualityCheckWF_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/SaveQualityCheckWFResponse" message="tns:IGenericService_SaveQualityCheckWF_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveQualityCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/SaveQualityCheck" message="tns:IGenericService_SaveQualityCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/SaveQualityCheckResponse" message="tns:IGenericService_SaveQualityCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchQualityCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/SearchQualityCheck" message="tns:IGenericService_SearchQualityCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/SearchQualityCheckResponse" message="tns:IGenericService_SearchQualityCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCustomer" message="tns:IGenericService_GetCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCustomerResponse" message="tns:IGenericService_GetCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCustomerMaster" message="tns:IGenericService_GetCustomerMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCustomerMasterResponse" message="tns:IGenericService_GetCustomerMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddCustomer" message="tns:IGenericService_AddCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddCustomerResponse" message="tns:IGenericService_AddCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditCustomer" message="tns:IGenericService_EditCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditCustomerResponse" message="tns:IGenericService_EditCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckDuplicateCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/CheckDuplicateCustomer" message="tns:IGenericService_CheckDuplicateCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/CheckDuplicateCustomerResponse" message="tns:IGenericService_CheckDuplicateCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCustomer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVCustomer" message="tns:IGenericService_GetLOVCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVCustomerResponse" message="tns:IGenericService_GetLOVCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVLocation" message="tns:IGenericService_GetLOVLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVLocationResponse" message="tns:IGenericService_GetLOVLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVState" message="tns:IGenericService_GetLOVState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVStateResponse" message="tns:IGenericService_GetLOVState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVOffice" message="tns:IGenericService_GetLOVOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVOfficeResponse" message="tns:IGenericService_GetLOVOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetOffice" message="tns:IGenericService_GetOffice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetOfficeResponse" message="tns:IGenericService_GetOffice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCityDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVCityDistrict" message="tns:IGenericService_GetLOVCityDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVCityDistrictResponse" message="tns:IGenericService_GetLOVCityDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAreaVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVAreaVillage" message="tns:IGenericService_GetLOVAreaVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVAreaVillageResponse" message="tns:IGenericService_GetLOVAreaVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVPin" message="tns:IGenericService_GetLOVPin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVPinResponse" message="tns:IGenericService_GetLOVPin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVBank">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVBank" message="tns:IGenericService_GetLOVBank_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVBankResponse" message="tns:IGenericService_GetLOVBank_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddState" message="tns:IGenericService_AddState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddStateResponse" message="tns:IGenericService_AddState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditState" message="tns:IGenericService_EditState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditStateResponse" message="tns:IGenericService_EditState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetState" message="tns:IGenericService_GetState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetStateResponse" message="tns:IGenericService_GetState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetRegion" message="tns:IGenericService_GetRegion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetRegionResponse" message="tns:IGenericService_GetRegion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVStateHistoryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVStateHistoryData" message="tns:IGenericService_GetLOVStateHistoryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVStateHistoryDataResponse" message="tns:IGenericService_GetLOVStateHistoryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCityDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddCityDistrict" message="tns:IGenericService_AddCityDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddCityDistrictResponse" message="tns:IGenericService_AddCityDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditCityDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditCityDistrict" message="tns:IGenericService_EditCityDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditCityDistrictResponse" message="tns:IGenericService_EditCityDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrict">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetCityDistrict" message="tns:IGenericService_GetCityDistrict_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetCityDistrictResponse" message="tns:IGenericService_GetCityDistrict_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCityDistrictHistoryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVCityDistrictHistoryData" message="tns:IGenericService_GetLOVCityDistrictHistoryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVCityDistrictHistoryDataResponse" message="tns:IGenericService_GetLOVCityDistrictHistoryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAreaVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddAreaVillage" message="tns:IGenericService_AddAreaVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddAreaVillageResponse" message="tns:IGenericService_AddAreaVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditAreaVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditAreaVillage" message="tns:IGenericService_EditAreaVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditAreaVillageResponse" message="tns:IGenericService_EditAreaVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaVillage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetAreaVillage" message="tns:IGenericService_GetAreaVillage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetAreaVillageResponse" message="tns:IGenericService_GetAreaVillage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAreaVillageHistoryData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetLOVAreaVillageHistoryData" message="tns:IGenericService_GetLOVAreaVillageHistoryData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetLOVAreaVillageHistoryDataResponse" message="tns:IGenericService_GetLOVAreaVillageHistoryData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPinCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/AddPinCode" message="tns:IGenericService_AddPinCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/AddPinCodeResponse" message="tns:IGenericService_AddPinCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditPinCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/EditPinCode" message="tns:IGenericService_EditPinCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/EditPinCodeResponse" message="tns:IGenericService_EditPinCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IGenericService/GetPinCode" message="tns:IGenericService_GetPinCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IGenericService/GetPinCodeResponse" message="tns:IGenericService_GetPinCode_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="EndPointHTTPGeneric" type="tns:IGenericService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerRoleList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCustomerRoleList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalutationList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetSalutationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuredDetails">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetInsuredDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalDataForCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetApprovalDataForCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPopUpValues">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetPopUpValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCustomerHistoryData">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVCustomerHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVDuplicateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVDuplicateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVParentCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVParentCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditEmployee">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVEmployee">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndustryList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIndustryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCountry">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVCountry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchProposalInformation">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/FetchProposalInformation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOccupationList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetOccupationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchQualityForNewProposal">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/FetchQualityForNewProposal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalRelatedData">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetProposalRelatedData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountType">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetBankAccountType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVBankBranch">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVBankBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCountryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetRegionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerRegionList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetPerRegionList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetDistrictList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCityList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCityDistrictList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePin">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/ValidatePin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPinCodeAddress">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVPinCodeAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLocation">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditLocation">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAddress">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVAddress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntermediaryCategoryList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIntermediaryCategoryList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParentRelationList">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetParentRelationList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntermediary">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIntermediary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsLicenseRequired">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIsLicenseRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsLicenseReqRoleWise">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIsLicenseReqRoleWise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDate">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLicenseDate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSourceBankApplicable">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIsSourceBankApplicable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryChangeCount">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCategoryChangeCount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsMultiUserRequired">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIsMultiUserRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerFlag">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetDealerFlag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsIdentityNumRequired">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIsIdentityNumRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalDataForIntermediary">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetApprovalDataForIntermediary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddIntermediary">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddIntermediary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditIntermediary">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditIntermediary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsServiceTaxRequired">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetIsServiceTaxRequired" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntermediary">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntermediary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntrHistoryData">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntrHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntermediaryType">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntermediaryType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntrLicense">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntrLicense" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPartner">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVPartner" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSourceBankMapID">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetSourceBankMapID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVParentIntermediary">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVParentIntermediary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAssociatedAgent">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVAssociatedAgent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPayLocation">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVPayLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicateIntermediary">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetDuplicateIntermediary" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOffice">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditOffice">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVOfficeHistoryData">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVOfficeHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetDuplicateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagWithUser">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/TagWithUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/Authenticate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthorized">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/IsAuthorized" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchQualityCheck">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/FetchQualityCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQualityCheckWF">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/SaveQualityCheckWF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQualityCheck">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/SaveQualityCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchQualityCheck">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/SearchQualityCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMaster">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCustomerMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDuplicateCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/CheckDuplicateCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCustomer">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVLocation">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVState">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVOffice">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetOffice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCityDistrict">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVCityDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAreaVillage">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVAreaVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPin">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVPin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVBank">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVBank" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddState">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditState">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetState">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetState" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetRegion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVStateHistoryData">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVStateHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCityDistrict">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddCityDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCityDistrict">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditCityDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrict">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetCityDistrict" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCityDistrictHistoryData">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVCityDistrictHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAreaVillage">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddAreaVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAreaVillage">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditAreaVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaVillage">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetAreaVillage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAreaVillageHistoryData">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetLOVAreaVillageHistoryData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPinCode">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/AddPinCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPinCode">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/EditPinCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <soap:operation soapAction="http://tempuri.org/IGenericService/GetPinCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="EndPointHTTPGeneric1" type="tns:IGenericService">
+    <wsp:PolicyReference URI="#EndPointHTTPGeneric1_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCustomerRoleList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCustomerRoleList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSalutationList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetSalutationList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsuredDetails">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetInsuredDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalDataForCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetApprovalDataForCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPopUpValues">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetPopUpValues" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCustomerHistoryData">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVCustomerHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVDuplicateCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVDuplicateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVParentCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVParentCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEmployee">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddEmployee">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditEmployee">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVEmployee">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndustryList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIndustryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCountry">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVCountry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchProposalInformation">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/FetchProposalInformation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOccupationList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetOccupationList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchQualityForNewProposal">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/FetchQualityForNewProposal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProposalRelatedData">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetProposalRelatedData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBankAccountType">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetBankAccountType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVBankBranch">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVBankBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCountryList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCountryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegionList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetRegionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPerRegionList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetPerRegionList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDistrictList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetDistrictList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCityList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrictList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCityDistrictList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePin">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/ValidatePin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPinCodeAddress">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVPinCodeAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocation">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLocation">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditLocation">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAddress">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntermediaryCategoryList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIntermediaryCategoryList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetParentRelationList">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetParentRelationList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIntermediary">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIntermediary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsLicenseRequired">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIsLicenseRequired" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsLicenseReqRoleWise">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIsLicenseReqRoleWise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLicenseDate">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLicenseDate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsSourceBankApplicable">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIsSourceBankApplicable" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCategoryChangeCount">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCategoryChangeCount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsMultiUserRequired">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIsMultiUserRequired" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDealerFlag">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetDealerFlag" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsIdentityNumRequired">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIsIdentityNumRequired" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetApprovalDataForIntermediary">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetApprovalDataForIntermediary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddIntermediary">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddIntermediary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditIntermediary">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditIntermediary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIsServiceTaxRequired">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetIsServiceTaxRequired" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntermediary">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntermediary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntrHistoryData">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntrHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntermediaryType">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntermediaryType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVIntrLicense">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVIntrLicense" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPartner">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVPartner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSourceBankMapID">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetSourceBankMapID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVParentIntermediary">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVParentIntermediary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAssociatedAgent">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVAssociatedAgent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPayLocation">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVPayLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicateIntermediary">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetDuplicateIntermediary" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOffice">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditOffice">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVOfficeHistoryData">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVOfficeHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDuplicateCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetDuplicateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserDetails">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetUserDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagWithUser">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/TagWithUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Authenticate">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/Authenticate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsAuthorized">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/IsAuthorized" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchQualityCheck">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/FetchQualityCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQualityCheckWF">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/SaveQualityCheckWF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveQualityCheck">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/SaveQualityCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchQualityCheck">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/SearchQualityCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerMaster">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCustomerMaster" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckDuplicateCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/CheckDuplicateCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCustomer">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVLocation">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVLocation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVState">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVOffice">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOffice">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetOffice" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCityDistrict">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVCityDistrict" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAreaVillage">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVAreaVillage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVPin">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVPin" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVBank">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVBank" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddState">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditState">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetState">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegion">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetRegion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVStateHistoryData">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVStateHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCityDistrict">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddCityDistrict" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditCityDistrict">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditCityDistrict" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCityDistrict">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetCityDistrict" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVCityDistrictHistoryData">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVCityDistrictHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAreaVillage">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddAreaVillage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditAreaVillage">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditAreaVillage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAreaVillage">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetAreaVillage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLOVAreaVillageHistoryData">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetLOVAreaVillageHistoryData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPinCode">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/AddPinCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditPinCode">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/EditPinCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPinCode">
+      <soap12:operation soapAction="http://tempuri.org/IGenericService/GetPinCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GenericService">
+    <wsdl:port name="EndPointHTTPGeneric" binding="tns:EndPointHTTPGeneric">
+      <soap:address location="http://ksvm25cdm1/WcfGenericService/GenericService.svc" />
+    </wsdl:port>
+    <wsdl:port name="EndPointHTTPGeneric1" binding="tns:EndPointHTTPGeneric1">
+      <soap12:address location="http://ksvm25cdm1/WcfGenericService/GenericService.svc/GenericCustomBinding" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://ksvm25cdm1/WcfGenericService/GenericService.svc/GenericCustomBinding</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

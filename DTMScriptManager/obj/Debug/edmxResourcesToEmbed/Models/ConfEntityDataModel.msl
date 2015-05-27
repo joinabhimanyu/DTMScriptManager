@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ConfModelStoreContainer" CdmEntityContainer="ConfEntities">
+    <EntitySetMapping Name="WSDL_REPORT_CLAUSE_DTL">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_CLAUSE_DTL">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_CLAUSE_DTL">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_CONF_WSDL_TEMPLATE_NO" ColumnName="NUM_CONF_WSDL_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="NUM_LABEL_CODE" ColumnName="NUM_LABEL_CODE" />
+          <ScalarProperty Name="TXT_LABEL_NAME" ColumnName="TXT_LABEL_NAME" />
+          <ScalarProperty Name="TXT_COMPONENT_TYPE" ColumnName="TXT_COMPONENT_TYPE" />
+          <ScalarProperty Name="NUM_CLAUSE_CODE" ColumnName="NUM_CLAUSE_CODE" />
+          <ScalarProperty Name="TXT_CONF_PARENT_PROPERTY_NAME" ColumnName="TXT_CONF_PARENT_PROPERTY_NAME" />
+          <ScalarProperty Name="NUM_CONF_PROPERTY_NO" ColumnName="NUM_CONF_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_NAME" ColumnName="TXT_CONF_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_URL_PATH" ColumnName="TXT_URL_PATH" />
+          <ScalarProperty Name="TXT_IS_NEW_PAGE" ColumnName="TXT_IS_NEW_PAGE" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_CONDITIONAL_MST">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_CONDITIONAL_MST">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_CONDITIONAL_MST">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="NUM_CONF_WSDL_TEMPLATE_NO" ColumnName="NUM_CONF_WSDL_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_CONF_PROPERTY_NO" ColumnName="NUM_CONF_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_NAME" ColumnName="TXT_CONF_PROPERTY_NAME" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="TXT_ORIGINAL_VALUE" ColumnName="TXT_ORIGINAL_VALUE" />
+          <ScalarProperty Name="TXT_REPLACED_VALUE" ColumnName="TXT_REPLACED_VALUE" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_FILE_PATH_INFO">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_FILE_PATH_INFO">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_FILE_PATH_INFO">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="TXT_SOURCE_PATH" ColumnName="TXT_SOURCE_PATH" />
+          <ScalarProperty Name="TXT_DESTINATION_PATH" ColumnName="TXT_DESTINATION_PATH" />
+          <ScalarProperty Name="DAT_START_DATE" ColumnName="DAT_START_DATE" />
+          <ScalarProperty Name="DAT_END_DATE" ColumnName="DAT_END_DATE" />
+          <ScalarProperty Name="TXT_POLICY_SHEDULE" ColumnName="TXT_POLICY_SHEDULE" />
+          <ScalarProperty Name="TXT_VEHICLE_CLASS_CODE" ColumnName="TXT_VEHICLE_CLASS_CODE" />
+          <ScalarProperty Name="TXT_RISK_VARIANT" ColumnName="TXT_RISK_VARIANT" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_GENISYS_WSDL">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_GENISYS_WSDL">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_GENISYS_WSDL">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="NUM_CONF_WSDL_TEMPLATE_NO" ColumnName="NUM_CONF_WSDL_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="NUM_CONF_PROPERTY_NO" ColumnName="NUM_CONF_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_NAME" ColumnName="TXT_CONF_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_YN_HAS_CHILD" ColumnName="TXT_YN_HAS_CHILD" />
+          <ScalarProperty Name="NUM_CONF_PARENT_PROPERTY_NO" ColumnName="NUM_CONF_PARENT_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_CLASS_NAME" ColumnName="TXT_CONF_CLASS_NAME" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_DATA_TYPE" ColumnName="TXT_CONF_PROPERTY_DATA_TYPE" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_INDEX" ColumnName="TXT_CONF_PROPERTY_INDEX" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_PARENT_INDEX" ColumnName="TXT_CONF_PROPERTY_PARENT_INDEX" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_IMAGE_DTL">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_IMAGE_DTL">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_IMAGE_DTL">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_TEMPLATE_NO" ColumnName="NUM_TEMPLATE_NO" />
+          <ScalarProperty Name="TXT_IMAGE_TYPE" ColumnName="TXT_IMAGE_TYPE" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="TXT_FILE_PATH" ColumnName="TXT_FILE_PATH" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_MAPPING_TAB">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_MAPPING_TAB">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_MAPPING_TAB">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_CONF_WSDL_TEMPLATE_NO" ColumnName="NUM_CONF_WSDL_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="NUM_CONF_PROPERTY_NO" ColumnName="NUM_CONF_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_NAME" ColumnName="TXT_CONF_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_YN_HAS_CHILD" ColumnName="TXT_YN_HAS_CHILD" />
+          <ScalarProperty Name="NUM_CONF_PARENT_PROPERTY_NO" ColumnName="NUM_CONF_PARENT_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_CLASS_NAME" ColumnName="TXT_CONF_CLASS_NAME" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_DATA_TYPE" ColumnName="TXT_CONF_PROPERTY_DATA_TYPE" />
+          <ScalarProperty Name="TXT_ACTUAL_PAGE_NAME" ColumnName="TXT_ACTUAL_PAGE_NAME" />
+          <ScalarProperty Name="NUM_LABEL_CODE" ColumnName="NUM_LABEL_CODE" />
+          <ScalarProperty Name="TXT_LABEL_NAME" ColumnName="TXT_LABEL_NAME" />
+          <ScalarProperty Name="TXT_CONF_PARENT_PROPERTY_NAME" ColumnName="TXT_CONF_PARENT_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_MAPPING_TYPE" ColumnName="TXT_MAPPING_TYPE" />
+          <ScalarProperty Name="TXT_YN_DEFAULT_VALUE" ColumnName="TXT_YN_DEFAULT_VALUE" />
+          <ScalarProperty Name="TXT_DEFAULT_VALUE" ColumnName="TXT_DEFAULT_VALUE" />
+          <ScalarProperty Name="TXT_IS_WORD" ColumnName="TXT_IS_WORD" />
+          <ScalarProperty Name="TXT_DATE_FORMAT" ColumnName="TXT_DATE_FORMAT" />
+          <ScalarProperty Name="TXT_ZERO_REPLACE" ColumnName="TXT_ZERO_REPLACE" />
+          <ScalarProperty Name="TXT_BLANK_REPLACE" ColumnName="TXT_BLANK_REPLACE" />
+          <ScalarProperty Name="TXT_IS_OLD_VALUE" ColumnName="TXT_IS_OLD_VALUE" />
+          <ScalarProperty Name="TXT_RCLD_COMPONENT" ColumnName="TXT_RCLD_COMPONENT" />
+          <ScalarProperty Name="TXT_COLL_OR_DIRECT_MAPPING" ColumnName="TXT_COLL_OR_DIRECT_MAPPING" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_MOD_RISK_MAPPING">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_MOD_RISK_MAPPING">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_MOD_RISK_MAPPING">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="TXT_SRL_NO_PATTERN" ColumnName="TXT_SRL_NO_PATTERN" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="NUM_CONF_PROPERTY_NO" ColumnName="NUM_CONF_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_NAME" ColumnName="TXT_CONF_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_YN_HAS_CHILD" ColumnName="TXT_YN_HAS_CHILD" />
+          <ScalarProperty Name="NUM_CONF_PARENT_PROPERTY_NO" ColumnName="NUM_CONF_PARENT_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_CLASS_NAME" ColumnName="TXT_CONF_CLASS_NAME" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_DATA_TYPE" ColumnName="TXT_CONF_PROPERTY_DATA_TYPE" />
+          <ScalarProperty Name="NUM_LABEL_CODE" ColumnName="NUM_LABEL_CODE" />
+          <ScalarProperty Name="TXT_LABEL_NAME" ColumnName="TXT_LABEL_NAME" />
+          <ScalarProperty Name="TXT_CONF_PARENT_PROPERTY_NAME" ColumnName="TXT_CONF_PARENT_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_MAPPING_TYPE" ColumnName="TXT_MAPPING_TYPE" />
+          <ScalarProperty Name="TXT_IS_OLD_VALUE" ColumnName="TXT_IS_OLD_VALUE" />
+          <ScalarProperty Name="TXT_RISK_GROUP_PROPERTY" ColumnName="TXT_RISK_GROUP_PROPERTY" />
+          <ScalarProperty Name="TXT_COVER_GROUP_PROPERTY" ColumnName="TXT_COVER_GROUP_PROPERTY" />
+          <ScalarProperty Name="TXT_HEADING" ColumnName="TXT_HEADING" />
+          <ScalarProperty Name="NUM_DISPLAY_SEQ_NO" ColumnName="NUM_DISPLAY_SEQ_NO" />
+          <ScalarProperty Name="TXT_HEADING_IS_BOLD" ColumnName="TXT_HEADING_IS_BOLD" />
+          <ScalarProperty Name="TXT_HEADING_TEXT_ALIGMENT" ColumnName="TXT_HEADING_TEXT_ALIGMENT" />
+          <ScalarProperty Name="TXT_CELL_IS_BOLD" ColumnName="TXT_CELL_IS_BOLD" />
+          <ScalarProperty Name="TXT_CELL_TEXT_ALIGMENT" ColumnName="TXT_CELL_TEXT_ALIGMENT" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_PAGE_LABEL">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_PAGE_LABEL">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_PAGE_LABEL">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="TXT_ACTUAL_PAGE_NAME" ColumnName="TXT_ACTUAL_PAGE_NAME" />
+          <ScalarProperty Name="NUM_LABEL_CODE" ColumnName="NUM_LABEL_CODE" />
+          <ScalarProperty Name="TXT_LABEL_NAME" ColumnName="TXT_LABEL_NAME" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_PRODUCT_MST">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_PRODUCT_MST">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_PRODUCT_MST">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS" ColumnName="NUM_LINE_OF_BUSINESS" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_PRODUCT_NAME" ColumnName="TXT_PRODUCT_NAME" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_RISK_MAPPING">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_RISK_MAPPING">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_RISK_MAPPING">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="NUM_CONF_PROPERTY_NO" ColumnName="NUM_CONF_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_NAME" ColumnName="TXT_CONF_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_YN_HAS_CHILD" ColumnName="TXT_YN_HAS_CHILD" />
+          <ScalarProperty Name="NUM_CONF_PARENT_PROPERTY_NO" ColumnName="NUM_CONF_PARENT_PROPERTY_NO" />
+          <ScalarProperty Name="TXT_CONF_CLASS_NAME" ColumnName="TXT_CONF_CLASS_NAME" />
+          <ScalarProperty Name="TXT_ACTUAL_PAGE_NAME" ColumnName="TXT_ACTUAL_PAGE_NAME" />
+          <ScalarProperty Name="TXT_CONF_PROPERTY_DATA_TYPE" ColumnName="TXT_CONF_PROPERTY_DATA_TYPE" />
+          <ScalarProperty Name="NUM_LABEL_CODE" ColumnName="NUM_LABEL_CODE" />
+          <ScalarProperty Name="TXT_LABEL_NAME" ColumnName="TXT_LABEL_NAME" />
+          <ScalarProperty Name="TXT_CONF_PARENT_PROPERTY_NAME" ColumnName="TXT_CONF_PARENT_PROPERTY_NAME" />
+          <ScalarProperty Name="TXT_MAPPING_TYPE" ColumnName="TXT_MAPPING_TYPE" />
+          <ScalarProperty Name="TXT_IS_WORD" ColumnName="TXT_IS_WORD" />
+          <ScalarProperty Name="TXT_ZERO_REPLACE" ColumnName="TXT_ZERO_REPLACE" />
+          <ScalarProperty Name="TXT_BLANK_REPLACE" ColumnName="TXT_BLANK_REPLACE" />
+          <ScalarProperty Name="TXT_IS_OLD_VALUE" ColumnName="TXT_IS_OLD_VALUE" />
+          <ScalarProperty Name="YN_RISKED_MAPPED_VALUE" ColumnName="YN_RISKED_MAPPED_VALUE" />
+          <ScalarProperty Name="TXT_RISK_COMPONENT" ColumnName="TXT_RISK_COMPONENT" />
+          <ScalarProperty Name="YN_COVER_MAPPED_VALUE" ColumnName="YN_COVER_MAPPED_VALUE" />
+          <ScalarProperty Name="TXT_COVER_COMPONENT" ColumnName="TXT_COVER_COMPONENT" />
+          <ScalarProperty Name="YN_LD_MAPPED_VALUE" ColumnName="YN_LD_MAPPED_VALUE" />
+          <ScalarProperty Name="TXT_LD_COMPONENT" ColumnName="TXT_LD_COMPONENT" />
+          <ScalarProperty Name="TXT_RISK_GROUP_PROPERTY" ColumnName="TXT_RISK_GROUP_PROPERTY" />
+          <ScalarProperty Name="TXT_COVER_GROUP_PROPERTY" ColumnName="TXT_COVER_GROUP_PROPERTY" />
+          <ScalarProperty Name="TXT_LD_GROUP_PROPERTY" ColumnName="TXT_LD_GROUP_PROPERTY" />
+          <ScalarProperty Name="TXT_RCLD_COMPONENT" ColumnName="TXT_RCLD_COMPONENT" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_SPECIAL_LABEL">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_SPECIAL_LABEL">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_SPECIAL_LABEL">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="TXT_SERVICE_TYPE" ColumnName="TXT_SERVICE_TYPE" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="NUM_HTML_PATTERN_NO" ColumnName="NUM_HTML_PATTERN_NO" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="NUM_LABEL_CODE" ColumnName="NUM_LABEL_CODE" />
+          <ScalarProperty Name="TXT_LABEL_NAME" ColumnName="TXT_LABEL_NAME" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WSDL_REPORT_TABLE_MAPPING">
+      <EntityTypeMapping TypeName="ConfModel.WSDL_REPORT_TABLE_MAPPING">
+        <MappingFragment StoreEntitySet="WSDL_REPORT_TABLE_MAPPING">
+          <ScalarProperty Name="NUM_LINE_OF_BUSINESS_CODE" ColumnName="NUM_LINE_OF_BUSINESS_CODE" />
+          <ScalarProperty Name="NUM_PRODUCT_CODE" ColumnName="NUM_PRODUCT_CODE" />
+          <ScalarProperty Name="NUM_REPORT_TYPE_CODE" ColumnName="NUM_REPORT_TYPE_CODE" />
+          <ScalarProperty Name="NUM_HTML_TEMPLATE_NO" ColumnName="NUM_HTML_TEMPLATE_NO" />
+          <ScalarProperty Name="TXT_WSDL_TYPE" ColumnName="TXT_WSDL_TYPE" />
+          <ScalarProperty Name="NUM_SERIAL_NO" ColumnName="NUM_SERIAL_NO" />
+          <ScalarProperty Name="NUM_LABEL_CODE" ColumnName="NUM_LABEL_CODE" />
+          <ScalarProperty Name="TXT_LABEL_NAME" ColumnName="TXT_LABEL_NAME" />
+          <ScalarProperty Name="TXT_TABLE_NAME" ColumnName="TXT_TABLE_NAME" />
+          <ScalarProperty Name="NUM_COLUMN_SEQUENCE" ColumnName="NUM_COLUMN_SEQUENCE" />
+          <ScalarProperty Name="TXT_IS_COLUMN_VISIBLE" ColumnName="TXT_IS_COLUMN_VISIBLE" />
+          <ScalarProperty Name="TXT_COLUMN_HEADING" ColumnName="TXT_COLUMN_HEADING" />
+          <ScalarProperty Name="TXT_HEADING_IS_BOLD" ColumnName="TXT_HEADING_IS_BOLD" />
+          <ScalarProperty Name="TXT_HEADING_ALIGMENT" ColumnName="TXT_HEADING_ALIGMENT" />
+          <ScalarProperty Name="TXT_HEADER_WIDTH" ColumnName="TXT_HEADER_WIDTH" />
+          <ScalarProperty Name="TXT_RISK_COVER" ColumnName="TXT_RISK_COVER" />
+          <ScalarProperty Name="TXT_COLUMN_NAME" ColumnName="TXT_COLUMN_NAME" />
+          <ScalarProperty Name="TXT_DATA_TYPE" ColumnName="TXT_DATA_TYPE" />
+          <ScalarProperty Name="TXT_DATA_FORMAT" ColumnName="TXT_DATA_FORMAT" />
+          <ScalarProperty Name="TXT_CELL_IS_BOLD" ColumnName="TXT_CELL_IS_BOLD" />
+          <ScalarProperty Name="TXT_CELL_ALIGMENT" ColumnName="TXT_CELL_ALIGMENT" />
+          <ScalarProperty Name="TXT_DEFAULT_VALUE" ColumnName="TXT_DEFAULT_VALUE" />
+          <ScalarProperty Name="TXT_WHERE_CLAUSE" ColumnName="TXT_WHERE_CLAUSE" />
+          <ScalarProperty Name="TXT_ORDER_BY" ColumnName="TXT_ORDER_BY" />
+          <ScalarProperty Name="TXT_GROUP_FUNCTION" ColumnName="TXT_GROUP_FUNCTION" />
+          <ScalarProperty Name="TXT_GROUP_BY" ColumnName="TXT_GROUP_BY" />
+          <ScalarProperty Name="TXT_DISPLAY_TYPE" ColumnName="TXT_DISPLAY_TYPE" />
+          <ScalarProperty Name="TXT_WSDL_PROPERTY" ColumnName="TXT_WSDL_PROPERTY" />
+          <ScalarProperty Name="TXT_HAS_PARENT" ColumnName="TXT_HAS_PARENT" />
+          <ScalarProperty Name="TXT_WSDL_PARENT_PROPERTY" ColumnName="TXT_WSDL_PARENT_PROPERTY" />
+          <ScalarProperty Name="TXT_WSDL_CONDITION_PROPERTY" ColumnName="TXT_WSDL_CONDITION_PROPERTY" />
+          <ScalarProperty Name="TXT_WSDL_CONDITION" ColumnName="TXT_WSDL_CONDITION" />
+          <ScalarProperty Name="TXT_REPLACE_VALUE" ColumnName="TXT_REPLACE_VALUE" />
+          <ScalarProperty Name="TXT_USER_ID" ColumnName="TXT_USER_ID" />
+          <ScalarProperty Name="DAT_INSERT_DATE" ColumnName="DAT_INSERT_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

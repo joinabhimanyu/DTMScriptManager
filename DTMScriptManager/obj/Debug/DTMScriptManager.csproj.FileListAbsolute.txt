@@ -1,0 +1,72 @@
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\DTMScriptManager.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\DTMScriptManager.pdb
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\Antlr3.Runtime.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\EntityFramework.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\Newtonsoft.Json.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Net.Http.Formatting.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.WebHost.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Mvc.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Optimization.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Providers.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Razor.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Deployment.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Razor.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\WebGrease.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\EntityFramework.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\Newtonsoft.Json.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Net.Http.Formatting.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.WebHost.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Mvc.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.Razor.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Deployment.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Razor.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\obj\Debug\DTMScriptManager.csprojResolveAssemblyReference.cache
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\obj\Debug\DTMScriptManager.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\obj\Debug\DTMScriptManager.pdb
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\Microsoft.Web.Helpers.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\WebMatrix.Data.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\WebMatrix.WebData.dll
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\WebMatrix.Data.xml
+C:\Users\u3696174\Documents\Visual Studio 2012\Projects\DTMScriptManager\DTMScriptManager\bin\WebMatrix.WebData.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\DTMScriptManager.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\DTMScriptManager.pdb
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\Antlr3.Runtime.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\EntityFramework.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\Microsoft.Web.Helpers.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\Microsoft.Web.Infrastructure.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\Newtonsoft.Json.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Net.Http.Formatting.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.WebHost.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Mvc.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Optimization.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Providers.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Razor.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Deployment.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Razor.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\WebGrease.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\WebMatrix.Data.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\WebMatrix.WebData.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\EntityFramework.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\Newtonsoft.Json.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Net.Http.Formatting.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Http.WebHost.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Mvc.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.Razor.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Deployment.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\System.Web.WebPages.Razor.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\WebMatrix.Data.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\bin\WebMatrix.WebData.xml
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\obj\Debug\DTMScriptManager.csprojResolveAssemblyReference.cache
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\obj\Debug\DTMScriptManager.dll
+C:\inetpub\wwwroot\DTMScriptManager\DTMScriptManager\obj\Debug\DTMScriptManager.pdb

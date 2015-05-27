@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/GeneralServiceBL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/GeneralServiceBL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ConfWFHelper">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseTransRBFailed" type="xs:boolean" />
+      <xs:element minOccurs="0" name="GetApprovalMsg" nillable="true" type="tns:ArrayOfclsApprovalMsg" />
+      <xs:element minOccurs="0" name="GetLinkIDData" nillable="true" type="tns:ArrayOfclsLinkIdDtls" />
+      <xs:element minOccurs="0" name="WFErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WFMessageHtml" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WFMessageList" nillable="true" type="tns:ArrayOfclsMessageItem" />
+      <xs:element minOccurs="0" name="WFStateAction" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WFSystemID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WFTransRolledback" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ConfWFHelper" nillable="true" type="tns:ConfWFHelper" />
+  <xs:complexType name="ArrayOfclsApprovalMsg">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsApprovalMsg" nillable="true" type="tns:clsApprovalMsg" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsApprovalMsg" nillable="true" type="tns:ArrayOfclsApprovalMsg" />
+  <xs:complexType name="clsApprovalMsg">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Group" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsApprovalMsg" nillable="true" type="tns:clsApprovalMsg" />
+  <xs:complexType name="ArrayOfclsLinkIdDtls">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsLinkIdDtls" nillable="true" type="tns:clsLinkIdDtls" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsLinkIdDtls" nillable="true" type="tns:ArrayOfclsLinkIdDtls" />
+  <xs:complexType name="clsLinkIdDtls">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LinkID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LinkIDName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsLinkIdDtls" nillable="true" type="tns:clsLinkIdDtls" />
+  <xs:complexType name="ArrayOfclsMessageItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsMessageItem" nillable="true" type="tns:clsMessageItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsMessageItem" nillable="true" type="tns:ArrayOfclsMessageItem" />
+  <xs:complexType name="clsMessageItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemLabel" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemValue" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsMessageItem" nillable="true" type="tns:clsMessageItem" />
+  <xs:complexType name="GeneralServiceResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaseCurrency" nillable="true" type="tns:Currency" />
+      <xs:element minOccurs="0" name="ClsCovernoteDTLS" nillable="true" type="tns:ArrayOfclsCovernoteDTLS" />
+      <xs:element minOccurs="0" name="ClsQuotationDTLS" nillable="true" type="tns:ArrayOfclsQuotationDTLS" />
+      <xs:element minOccurs="0" name="ConfWFHelper" nillable="true" type="tns:ConfWFHelper" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="tns:Currency" />
+      <xs:element minOccurs="0" name="CurrencyAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="CurrencyAmountConverted" type="xs:double" />
+      <xs:element minOccurs="0" name="ErrorMsg" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ErrorText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExchangeRate" type="xs:double" />
+      <xs:element minOccurs="0" name="ExchangeRateInverse" type="xs:double" />
+      <xs:element minOccurs="0" name="Premium" nillable="true" type="tns:Premium" />
+      <xs:element minOccurs="0" name="ProposalLOV" nillable="true" type="tns:ArrayOfclsProposalData" />
+      <xs:element minOccurs="0" name="ProposalStatus" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalStatusDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ResultQC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SuccessText" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkFlowStateInfo" nillable="true" type="tns:WorkFlowStateInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GeneralServiceResult" nillable="true" type="tns:GeneralServiceResult" />
+  <xs:complexType name="Currency">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurrencyDisplaySymbol" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencySymbol" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Currency" nillable="true" type="tns:Currency" />
+  <xs:complexType name="ArrayOfclsCovernoteDTLS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsCovernoteDTLS" nillable="true" type="tns:clsCovernoteDTLS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsCovernoteDTLS" nillable="true" type="tns:ArrayOfclsCovernoteDTLS" />
+  <xs:complexType name="clsCovernoteDTLS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PRODUCT_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COVERNOTE_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MANUAL_COVERNOTE_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTRATION_MARKS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTRATION_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DATE_OF_ISSUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TIME_OF_ISSUE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PERIOD_OF_VALIDITY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VEHICLE_MAKE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MANUFACTURE_YEAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GVW" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LCC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CARRYING_CAPACITY" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VEHICLE_MODEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ENGINE_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHESSIS_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NAME_OF_INSURED" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ADDRESS_OF_INSURED" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BRANCH_OFFICE_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGD_OFFICE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DATE_OF_EXPIRY_OF_INSURENCE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AUTO_COVERNOTE_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CUBIC_CAPACITY" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsCovernoteDTLS" nillable="true" type="tns:clsCovernoteDTLS" />
+  <xs:complexType name="ArrayOfclsQuotationDTLS">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsQuotationDTLS" nillable="true" type="tns:clsQuotationDTLS" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsQuotationDTLS" nillable="true" type="tns:ArrayOfclsQuotationDTLS" />
+  <xs:complexType name="clsQuotationDTLS">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PRODUCT_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PROPOSER_NAME" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PROPOSER_ADDRESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTRATION_ZONE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MODEL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MFG_YEAR" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COVERNOTE_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="COVERNOTE_TYPE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MANUAL_COVERNOTE_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="REGISTRATION_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VEHICLE_MAKE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CHASSIS_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ENGINE_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="POLICY_NO" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VEHICLE_IDV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ELECTRICAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NONELECTRICAL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TRAILERS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CNG_UNIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LPG_UNIT" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAL_IDV" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NET_PREMIUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SERVICE_TAX" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EDUCATION_CESS" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QUOTATION_NUMBER" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="QUOTATION_DATE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RTO_LOCATION" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BASIC_PREMIUM_ON_VEHICLE_A" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BASIC_THIRD_PARTY_LIABILITY_B1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PAID_DRIVER_ENDT_IMT_28_B2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PA_COVER_FOR_OWNER_DRIVER_OF" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAL_PACKAGE_PREMIUM_AB" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAL_LIABILITY_PREMIUM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TOTAL_PREMIUM_PAYABLE" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsQuotationDTLS" nillable="true" type="tns:clsQuotationDTLS" />
+  <xs:complexType name="Premium">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BasicPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="ERFAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="EndorsementERFAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="EndorsementPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="EndorsementSI" type="xs:double" />
+      <xs:element minOccurs="0" name="EndorsementServiceTax" type="xs:double" />
+      <xs:element minOccurs="0" name="EndorsementStampDuty" type="xs:double" />
+      <xs:element minOccurs="0" name="EndorsementTerrorismPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="NetODPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="NetPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="NetTPPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="ODLoadingRate" type="xs:double" />
+      <xs:element minOccurs="0" name="ServiceTax" type="xs:double" />
+      <xs:element minOccurs="0" name="StampDuty" type="xs:double" />
+      <xs:element minOccurs="0" name="TPLoadingRate" type="xs:double" />
+      <xs:element minOccurs="0" name="TerrorismPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalPremium" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalSI" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Premium" nillable="true" type="tns:Premium" />
+  <xs:complexType name="ArrayOfclsProposalData">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="clsProposalData" nillable="true" type="tns:clsProposalData" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfclsProposalData" nillable="true" type="tns:ArrayOfclsProposalData" />
+  <xs:complexType name="clsProposalData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProposalNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProposalDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CustomerName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PolicyNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CoverNote" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="clsProposalData" nillable="true" type="tns:clsProposalData" />
+  <xs:complexType name="WorkFlowStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GetCompltedSates" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GetLastVisitedState" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GetVisitedStates" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkFlowStateInfo" nillable="true" type="tns:WorkFlowStateInfo" />
+</xs:schema>

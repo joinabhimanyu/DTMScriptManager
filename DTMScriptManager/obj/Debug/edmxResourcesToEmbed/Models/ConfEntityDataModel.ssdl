@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ConfModel.Store" Alias="Self" Provider="Oracle.ManagedDataAccess.Client" ProviderManifestToken="11.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ConfModelStoreContainer">
+    <EntitySet Name="WSDL_REPORT_CLAUSE_DTL" EntityType="ConfModel.Store.WSDL_REPORT_CLAUSE_DTL" store:Type="Tables" Schema="INS" />
+    <EntitySet Name="WSDL_REPORT_CONDITIONAL_MST" EntityType="ConfModel.Store.WSDL_REPORT_CONDITIONAL_MST" store:Type="Tables" Schema="INS" />
+    <EntitySet Name="WSDL_REPORT_FILE_PATH_INFO" EntityType="ConfModel.Store.WSDL_REPORT_FILE_PATH_INFO" store:Type="Tables" store:Schema="INS" store:Name="WSDL_REPORT_FILE_PATH_INFO">
+      <DefiningQuery>SELECT 
+      "WSDL_REPORT_FILE_PATH_INFO"."NUM_LINE_OF_BUSINESS_CODE" AS "NUM_LINE_OF_BUSINESS_CODE", 
+      "WSDL_REPORT_FILE_PATH_INFO"."NUM_PRODUCT_CODE" AS "NUM_PRODUCT_CODE", 
+      "WSDL_REPORT_FILE_PATH_INFO"."NUM_REPORT_TYPE_CODE" AS "NUM_REPORT_TYPE_CODE", 
+      "WSDL_REPORT_FILE_PATH_INFO"."NUM_HTML_TEMPLATE_NO" AS "NUM_HTML_TEMPLATE_NO", 
+      "WSDL_REPORT_FILE_PATH_INFO"."TXT_SOURCE_PATH" AS "TXT_SOURCE_PATH", 
+      "WSDL_REPORT_FILE_PATH_INFO"."TXT_DESTINATION_PATH" AS "TXT_DESTINATION_PATH", 
+      "WSDL_REPORT_FILE_PATH_INFO"."DAT_START_DATE" AS "DAT_START_DATE", 
+      "WSDL_REPORT_FILE_PATH_INFO"."DAT_END_DATE" AS "DAT_END_DATE", 
+      "WSDL_REPORT_FILE_PATH_INFO"."TXT_POLICY_SHEDULE" AS "TXT_POLICY_SHEDULE", 
+      "WSDL_REPORT_FILE_PATH_INFO"."TXT_VEHICLE_CLASS_CODE" AS "TXT_VEHICLE_CLASS_CODE", 
+      "WSDL_REPORT_FILE_PATH_INFO"."TXT_RISK_VARIANT" AS "TXT_RISK_VARIANT", 
+      "WSDL_REPORT_FILE_PATH_INFO"."TXT_USER_ID" AS "TXT_USER_ID", 
+      "WSDL_REPORT_FILE_PATH_INFO"."DAT_INSERT_DATE" AS "DAT_INSERT_DATE"
+      FROM "INS"."WSDL_REPORT_FILE_PATH_INFO" "WSDL_REPORT_FILE_PATH_INFO"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WSDL_REPORT_GENISYS_WSDL" EntityType="ConfModel.Store.WSDL_REPORT_GENISYS_WSDL" store:Type="Tables" Schema="INS" />
+    <EntitySet Name="WSDL_REPORT_IMAGE_DTL" EntityType="ConfModel.Store.WSDL_REPORT_IMAGE_DTL" store:Type="Tables" store:Schema="INS" store:Name="WSDL_REPORT_IMAGE_DTL">
+      <DefiningQuery>SELECT 
+      "WSDL_REPORT_IMAGE_DTL"."NUM_LINE_OF_BUSINESS_CODE" AS "NUM_LINE_OF_BUSINESS_CODE", 
+      "WSDL_REPORT_IMAGE_DTL"."NUM_PRODUCT_CODE" AS "NUM_PRODUCT_CODE", 
+      "WSDL_REPORT_IMAGE_DTL"."TXT_WSDL_TYPE" AS "TXT_WSDL_TYPE", 
+      "WSDL_REPORT_IMAGE_DTL"."NUM_REPORT_TYPE_CODE" AS "NUM_REPORT_TYPE_CODE", 
+      "WSDL_REPORT_IMAGE_DTL"."NUM_TEMPLATE_NO" AS "NUM_TEMPLATE_NO", 
+      "WSDL_REPORT_IMAGE_DTL"."TXT_IMAGE_TYPE" AS "TXT_IMAGE_TYPE", 
+      "WSDL_REPORT_IMAGE_DTL"."NUM_SERIAL_NO" AS "NUM_SERIAL_NO", 
+      "WSDL_REPORT_IMAGE_DTL"."TXT_FILE_PATH" AS "TXT_FILE_PATH", 
+      "WSDL_REPORT_IMAGE_DTL"."TXT_USER_ID" AS "TXT_USER_ID", 
+      "WSDL_REPORT_IMAGE_DTL"."DAT_INSERT_DATE" AS "DAT_INSERT_DATE"
+      FROM "INS"."WSDL_REPORT_IMAGE_DTL" "WSDL_REPORT_IMAGE_DTL"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WSDL_REPORT_MAPPING_TAB" EntityType="ConfModel.Store.WSDL_REPORT_MAPPING_TAB" store:Type="Tables" Schema="INS" />
+    <EntitySet Name="WSDL_REPORT_MOD_RISK_MAPPING" EntityType="ConfModel.Store.WSDL_REPORT_MOD_RISK_MAPPING" store:Type="Tables" store:Schema="INS" store:Name="WSDL_REPORT_MOD_RISK_MAPPING">
+      <DefiningQuery>SELECT 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_LINE_OF_BUSINESS_CODE" AS "NUM_LINE_OF_BUSINESS_CODE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_PRODUCT_CODE" AS "NUM_PRODUCT_CODE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_SERVICE_TYPE" AS "TXT_SERVICE_TYPE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_WSDL_TYPE" AS "TXT_WSDL_TYPE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_REPORT_TYPE_CODE" AS "NUM_REPORT_TYPE_CODE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_HTML_TEMPLATE_NO" AS "NUM_HTML_TEMPLATE_NO", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_SRL_NO_PATTERN" AS "TXT_SRL_NO_PATTERN", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_SERIAL_NO" AS "NUM_SERIAL_NO", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_CONF_PROPERTY_NO" AS "NUM_CONF_PROPERTY_NO", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_CONF_PROPERTY_NAME" AS "TXT_CONF_PROPERTY_NAME", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_YN_HAS_CHILD" AS "TXT_YN_HAS_CHILD", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_CONF_PARENT_PROPERTY_NO" AS "NUM_CONF_PARENT_PROPERTY_NO", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_CONF_CLASS_NAME" AS "TXT_CONF_CLASS_NAME", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_CONF_PROPERTY_DATA_TYPE" AS "TXT_CONF_PROPERTY_DATA_TYPE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_LABEL_CODE" AS "NUM_LABEL_CODE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_LABEL_NAME" AS "TXT_LABEL_NAME", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_CONF_PARENT_PROPERTY_NAME" AS "TXT_CONF_PARENT_PROPERTY_NAME", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_MAPPING_TYPE" AS "TXT_MAPPING_TYPE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_IS_OLD_VALUE" AS "TXT_IS_OLD_VALUE", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_RISK_GROUP_PROPERTY" AS "TXT_RISK_GROUP_PROPERTY", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_COVER_GROUP_PROPERTY" AS "TXT_COVER_GROUP_PROPERTY", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_HEADING" AS "TXT_HEADING", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."NUM_DISPLAY_SEQ_NO" AS "NUM_DISPLAY_SEQ_NO", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_HEADING_IS_BOLD" AS "TXT_HEADING_IS_BOLD", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_HEADING_TEXT_ALIGMENT" AS "TXT_HEADING_TEXT_ALIGMENT", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_CELL_IS_BOLD" AS "TXT_CELL_IS_BOLD", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_CELL_TEXT_ALIGMENT" AS "TXT_CELL_TEXT_ALIGMENT", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."TXT_USER_ID" AS "TXT_USER_ID", 
+      "WSDL_REPORT_MOD_RISK_MAPPING"."DAT_INSERT_DATE" AS "DAT_INSERT_DATE"
+      FROM "INS"."WSDL_REPORT_MOD_RISK_MAPPING" "WSDL_REPORT_MOD_RISK_MAPPING"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WSDL_REPORT_PAGE_LABEL" EntityType="ConfModel.Store.WSDL_REPORT_PAGE_LABEL" store:Type="Tables" Schema="INS" />
+    <EntitySet Name="WSDL_REPORT_PRODUCT_MST" EntityType="ConfModel.Store.WSDL_REPORT_PRODUCT_MST" store:Type="Tables" Schema="INS" />
+    <EntitySet Name="WSDL_REPORT_RISK_MAPPING" EntityType="ConfModel.Store.WSDL_REPORT_RISK_MAPPING" store:Type="Tables" store:Schema="INS" store:Name="WSDL_REPORT_RISK_MAPPING">
+      <DefiningQuery>SELECT 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_LINE_OF_BUSINESS_CODE" AS "NUM_LINE_OF_BUSINESS_CODE", 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_PRODUCT_CODE" AS "NUM_PRODUCT_CODE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_WSDL_TYPE" AS "TXT_WSDL_TYPE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_SERVICE_TYPE" AS "TXT_SERVICE_TYPE", 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_REPORT_TYPE_CODE" AS "NUM_REPORT_TYPE_CODE", 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_HTML_TEMPLATE_NO" AS "NUM_HTML_TEMPLATE_NO", 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_SERIAL_NO" AS "NUM_SERIAL_NO", 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_CONF_PROPERTY_NO" AS "NUM_CONF_PROPERTY_NO", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_CONF_PROPERTY_NAME" AS "TXT_CONF_PROPERTY_NAME", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_YN_HAS_CHILD" AS "TXT_YN_HAS_CHILD", 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_CONF_PARENT_PROPERTY_NO" AS "NUM_CONF_PARENT_PROPERTY_NO", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_CONF_CLASS_NAME" AS "TXT_CONF_CLASS_NAME", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_ACTUAL_PAGE_NAME" AS "TXT_ACTUAL_PAGE_NAME", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_CONF_PROPERTY_DATA_TYPE" AS "TXT_CONF_PROPERTY_DATA_TYPE", 
+      "WSDL_REPORT_RISK_MAPPING"."NUM_LABEL_CODE" AS "NUM_LABEL_CODE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_LABEL_NAME" AS "TXT_LABEL_NAME", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_CONF_PARENT_PROPERTY_NAME" AS "TXT_CONF_PARENT_PROPERTY_NAME", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_MAPPING_TYPE" AS "TXT_MAPPING_TYPE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_IS_WORD" AS "TXT_IS_WORD", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_ZERO_REPLACE" AS "TXT_ZERO_REPLACE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_BLANK_REPLACE" AS "TXT_BLANK_REPLACE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_IS_OLD_VALUE" AS "TXT_IS_OLD_VALUE", 
+      "WSDL_REPORT_RISK_MAPPING"."YN_RISKED_MAPPED_VALUE" AS "YN_RISKED_MAPPED_VALUE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_RISK_COMPONENT" AS "TXT_RISK_COMPONENT", 
+      "WSDL_REPORT_RISK_MAPPING"."YN_COVER_MAPPED_VALUE" AS "YN_COVER_MAPPED_VALUE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_COVER_COMPONENT" AS "TXT_COVER_COMPONENT", 
+      "WSDL_REPORT_RISK_MAPPING"."YN_LD_MAPPED_VALUE" AS "YN_LD_MAPPED_VALUE", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_LD_COMPONENT" AS "TXT_LD_COMPONENT", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_RISK_GROUP_PROPERTY" AS "TXT_RISK_GROUP_PROPERTY", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_COVER_GROUP_PROPERTY" AS "TXT_COVER_GROUP_PROPERTY", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_LD_GROUP_PROPERTY" AS "TXT_LD_GROUP_PROPERTY", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_RCLD_COMPONENT" AS "TXT_RCLD_COMPONENT", 
+      "WSDL_REPORT_RISK_MAPPING"."TXT_USER_ID" AS "TXT_USER_ID", 
+      "WSDL_REPORT_RISK_MAPPING"."DAT_INSERT_DATE" AS "DAT_INSERT_DATE"
+      FROM "INS"."WSDL_REPORT_RISK_MAPPING" "WSDL_REPORT_RISK_MAPPING"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WSDL_REPORT_SPECIAL_LABEL" EntityType="ConfModel.Store.WSDL_REPORT_SPECIAL_LABEL" store:Type="Tables" store:Schema="INS" store:Name="WSDL_REPORT_SPECIAL_LABEL">
+      <DefiningQuery>SELECT 
+      "WSDL_REPORT_SPECIAL_LABEL"."NUM_LINE_OF_BUSINESS_CODE" AS "NUM_LINE_OF_BUSINESS_CODE", 
+      "WSDL_REPORT_SPECIAL_LABEL"."NUM_PRODUCT_CODE" AS "NUM_PRODUCT_CODE", 
+      "WSDL_REPORT_SPECIAL_LABEL"."TXT_SERVICE_TYPE" AS "TXT_SERVICE_TYPE", 
+      "WSDL_REPORT_SPECIAL_LABEL"."TXT_WSDL_TYPE" AS "TXT_WSDL_TYPE", 
+      "WSDL_REPORT_SPECIAL_LABEL"."NUM_REPORT_TYPE_CODE" AS "NUM_REPORT_TYPE_CODE", 
+      "WSDL_REPORT_SPECIAL_LABEL"."NUM_HTML_TEMPLATE_NO" AS "NUM_HTML_TEMPLATE_NO", 
+      "WSDL_REPORT_SPECIAL_LABEL"."NUM_HTML_PATTERN_NO" AS "NUM_HTML_PATTERN_NO", 
+      "WSDL_REPORT_SPECIAL_LABEL"."NUM_SERIAL_NO" AS "NUM_SERIAL_NO", 
+      "WSDL_REPORT_SPECIAL_LABEL"."NUM_LABEL_CODE" AS "NUM_LABEL_CODE", 
+      "WSDL_REPORT_SPECIAL_LABEL"."TXT_LABEL_NAME" AS "TXT_LABEL_NAME", 
+      "WSDL_REPORT_SPECIAL_LABEL"."TXT_USER_ID" AS "TXT_USER_ID", 
+      "WSDL_REPORT_SPECIAL_LABEL"."DAT_INSERT_DATE" AS "DAT_INSERT_DATE"
+      FROM "INS"."WSDL_REPORT_SPECIAL_LABEL" "WSDL_REPORT_SPECIAL_LABEL"</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WSDL_REPORT_TABLE_MAPPING" EntityType="ConfModel.Store.WSDL_REPORT_TABLE_MAPPING" store:Type="Tables" store:Schema="INS" store:Name="WSDL_REPORT_TABLE_MAPPING">
+      <DefiningQuery>SELECT 
+      "WSDL_REPORT_TABLE_MAPPING"."NUM_LINE_OF_BUSINESS_CODE" AS "NUM_LINE_OF_BUSINESS_CODE", 
+      "WSDL_REPORT_TABLE_MAPPING"."NUM_PRODUCT_CODE" AS "NUM_PRODUCT_CODE", 
+      "WSDL_REPORT_TABLE_MAPPING"."NUM_REPORT_TYPE_CODE" AS "NUM_REPORT_TYPE_CODE", 
+      "WSDL_REPORT_TABLE_MAPPING"."NUM_HTML_TEMPLATE_NO" AS "NUM_HTML_TEMPLATE_NO", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_WSDL_TYPE" AS "TXT_WSDL_TYPE", 
+      "WSDL_REPORT_TABLE_MAPPING"."NUM_SERIAL_NO" AS "NUM_SERIAL_NO", 
+      "WSDL_REPORT_TABLE_MAPPING"."NUM_LABEL_CODE" AS "NUM_LABEL_CODE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_LABEL_NAME" AS "TXT_LABEL_NAME", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_TABLE_NAME" AS "TXT_TABLE_NAME", 
+      "WSDL_REPORT_TABLE_MAPPING"."NUM_COLUMN_SEQUENCE" AS "NUM_COLUMN_SEQUENCE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_IS_COLUMN_VISIBLE" AS "TXT_IS_COLUMN_VISIBLE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_COLUMN_HEADING" AS "TXT_COLUMN_HEADING", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_HEADING_IS_BOLD" AS "TXT_HEADING_IS_BOLD", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_HEADING_ALIGMENT" AS "TXT_HEADING_ALIGMENT", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_HEADER_WIDTH" AS "TXT_HEADER_WIDTH", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_RISK_COVER" AS "TXT_RISK_COVER", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_COLUMN_NAME" AS "TXT_COLUMN_NAME", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_DATA_TYPE" AS "TXT_DATA_TYPE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_DATA_FORMAT" AS "TXT_DATA_FORMAT", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_CELL_IS_BOLD" AS "TXT_CELL_IS_BOLD", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_CELL_ALIGMENT" AS "TXT_CELL_ALIGMENT", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_DEFAULT_VALUE" AS "TXT_DEFAULT_VALUE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_WHERE_CLAUSE" AS "TXT_WHERE_CLAUSE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_ORDER_BY" AS "TXT_ORDER_BY", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_GROUP_FUNCTION" AS "TXT_GROUP_FUNCTION", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_GROUP_BY" AS "TXT_GROUP_BY", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_DISPLAY_TYPE" AS "TXT_DISPLAY_TYPE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_WSDL_PROPERTY" AS "TXT_WSDL_PROPERTY", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_HAS_PARENT" AS "TXT_HAS_PARENT", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_WSDL_PARENT_PROPERTY" AS "TXT_WSDL_PARENT_PROPERTY", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_WSDL_CONDITION_PROPERTY" AS "TXT_WSDL_CONDITION_PROPERTY", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_WSDL_CONDITION" AS "TXT_WSDL_CONDITION", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_REPLACE_VALUE" AS "TXT_REPLACE_VALUE", 
+      "WSDL_REPORT_TABLE_MAPPING"."TXT_USER_ID" AS "TXT_USER_ID", 
+      "WSDL_REPORT_TABLE_MAPPING"."DAT_INSERT_DATE" AS "DAT_INSERT_DATE"
+      FROM "INS"."WSDL_REPORT_TABLE_MAPPING" "WSDL_REPORT_TABLE_MAPPING"</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_WSDL_REPORT_CLAUSE_DTL" Association="ConfModel.Store.FK_WSDL_REPORT_CLAUSE_DTL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_CLAUSE_DTL" EntitySet="WSDL_REPORT_CLAUSE_DTL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_CONDITIONAL_MST" Association="ConfModel.Store.FK_WSDL_REPORT_CONDITIONAL_MST">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_CONDITIONAL_MST" EntitySet="WSDL_REPORT_CONDITIONAL_MST" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_GENISYS_WSDL" Association="ConfModel.Store.FK_WSDL_REPORT_GENISYS_WSDL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_GENISYS_WSDL" EntitySet="WSDL_REPORT_GENISYS_WSDL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_IMAGE_DTL" Association="ConfModel.Store.FK_WSDL_REPORT_IMAGE_DTL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_IMAGE_DTL" EntitySet="WSDL_REPORT_IMAGE_DTL" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_MAPPING_TAB" Association="ConfModel.Store.FK_WSDL_REPORT_MAPPING_TAB">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_MAPPING_TAB" EntitySet="WSDL_REPORT_MAPPING_TAB" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WSDL_REPORT_PAGE_LABEL" Association="ConfModel.Store.FK_WSDL_REPORT_PAGE_LABEL">
+      <End Role="WSDL_REPORT_PRODUCT_MST" EntitySet="WSDL_REPORT_PRODUCT_MST" />
+      <End Role="WSDL_REPORT_PAGE_LABEL" EntitySet="WSDL_REPORT_PAGE_LABEL" />
+    </AssociationSet>
+    <AssociationSet Name="FK1_WSDL_REPORT_CLAUSE_DTL" Association="ConfModel.Store.FK1_WSDL_REPORT_CLAUSE_DTL">
+      <End Role="WSDL_REPORT_PAGE_LABEL" EntitySet="WSDL_REPORT_PAGE_LABEL" />
+      <End Role="WSDL_REPORT_CLAUSE_DTL" EntitySet="WSDL_REPORT_CLAUSE_DTL" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="WSDL_REPORT_CLAUSE_DTL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_CONF_WSDL_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_CLAUSE_CODE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_LABEL_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_LABEL_NAME" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="TXT_COMPONENT_TYPE" Type="varchar2" Nullable="false" MaxLength="5" />
+    <Property Name="NUM_CLAUSE_CODE" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="TXT_URL_PATH" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_IS_NEW_PAGE" Type="varchar2" MaxLength="1" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_CONDITIONAL_MST">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_CONF_WSDL_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_CONF_PROPERTY_NO" />
+      <PropertyRef Name="TXT_CONF_PROPERTY_NAME" />
+      <PropertyRef Name="TXT_ORIGINAL_VALUE" />
+      <PropertyRef Name="TXT_REPLACED_VALUE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_ORIGINAL_VALUE" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="TXT_REPLACED_VALUE" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'INS.WSDL_REPORT_FILE_PATH_INFO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WSDL_REPORT_FILE_PATH_INFO">
+    <Key>
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="TXT_SOURCE_PATH" />
+      <PropertyRef Name="TXT_DESTINATION_PATH" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_SOURCE_PATH" Type="varchar2" Nullable="false" MaxLength="700" />
+    <Property Name="TXT_DESTINATION_PATH" Type="varchar2" Nullable="false" MaxLength="700" />
+    <Property Name="DAT_START_DATE" Type="date" />
+    <Property Name="DAT_END_DATE" Type="date" />
+    <Property Name="TXT_POLICY_SHEDULE" Type="char" MaxLength="1" />
+    <Property Name="TXT_VEHICLE_CLASS_CODE" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_RISK_VARIANT" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_GENISYS_WSDL">
+    <Key>
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_CONF_WSDL_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_CONF_PROPERTY_NO" />
+      <PropertyRef Name="TXT_CONF_PROPERTY_NAME" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" MaxLength="4" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="varchar2" Nullable="false" MaxLength="250" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="number" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TXT_CONF_PROPERTY_INDEX" Type="varchar2" MaxLength="10" />
+    <Property Name="TXT_CONF_PROPERTY_PARENT_INDEX" Type="varchar2" MaxLength="10" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'INS.WSDL_REPORT_IMAGE_DTL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WSDL_REPORT_IMAGE_DTL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_WSDL_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="TXT_IMAGE_TYPE" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="TXT_FILE_PATH" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" Nullable="false" MaxLength="3" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_TEMPLATE_NO" Type="number" />
+    <Property Name="TXT_IMAGE_TYPE" Type="varchar2" Nullable="false" MaxLength="15" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_FILE_PATH" Type="varchar2" Nullable="false" MaxLength="100" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_MAPPING_TAB">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_MAPPING_TYPE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_CONF_WSDL_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="number" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="char" MaxLength="1" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="number" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="TXT_ACTUAL_PAGE_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="NUM_LABEL_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_LABEL_NAME" Type="varchar2" Nullable="false" MaxLength="150" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_MAPPING_TYPE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_YN_DEFAULT_VALUE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_DEFAULT_VALUE" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_IS_WORD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_DATE_FORMAT" Type="varchar2" MaxLength="15" />
+    <Property Name="TXT_ZERO_REPLACE" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_BLANK_REPLACE" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_IS_OLD_VALUE" Type="char" MaxLength="1" />
+    <Property Name="TXT_RCLD_COMPONENT" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_COLL_OR_DIRECT_MAPPING" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'INS.WSDL_REPORT_MOD_RISK_MAPPING' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WSDL_REPORT_MOD_RISK_MAPPING">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_MAPPING_TYPE" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_SRL_NO_PATTERN" Type="varchar2" MaxLength="50" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="number" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="char" MaxLength="1" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="number" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="NUM_LABEL_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_LABEL_NAME" Type="varchar2" Nullable="false" MaxLength="150" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_MAPPING_TYPE" Type="char" Nullable="false" MaxLength="2" />
+    <Property Name="TXT_IS_OLD_VALUE" Type="char" MaxLength="1" />
+    <Property Name="TXT_RISK_GROUP_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_COVER_GROUP_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_HEADING" Type="varchar2" MaxLength="100" />
+    <Property Name="NUM_DISPLAY_SEQ_NO" Type="number" />
+    <Property Name="TXT_HEADING_IS_BOLD" Type="char" MaxLength="1" />
+    <Property Name="TXT_HEADING_TEXT_ALIGMENT" Type="varchar2" MaxLength="6" />
+    <Property Name="TXT_CELL_IS_BOLD" Type="char" MaxLength="1" />
+    <Property Name="TXT_CELL_TEXT_ALIGMENT" Type="varchar2" MaxLength="6" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_PAGE_LABEL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_ACTUAL_PAGE_NAME" Type="varchar2" Nullable="false" MaxLength="150" />
+    <Property Name="NUM_LABEL_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_LABEL_NAME" Type="varchar2" Nullable="false" MaxLength="150" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WSDL_REPORT_PRODUCT_MST">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_PRODUCT_NAME" Type="varchar2" Nullable="false" MaxLength="200" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'INS.WSDL_REPORT_RISK_MAPPING' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WSDL_REPORT_RISK_MAPPING">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_MAPPING_TYPE" />
+      <PropertyRef Name="TXT_IS_WORD" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_CONF_PROPERTY_NO" Type="number" />
+    <Property Name="TXT_CONF_PROPERTY_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_YN_HAS_CHILD" Type="char" MaxLength="1" />
+    <Property Name="NUM_CONF_PARENT_PROPERTY_NO" Type="number" />
+    <Property Name="TXT_CONF_CLASS_NAME" Type="varchar2" MaxLength="100" />
+    <Property Name="TXT_ACTUAL_PAGE_NAME" Type="varchar2" MaxLength="200" />
+    <Property Name="TXT_CONF_PROPERTY_DATA_TYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="NUM_LABEL_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_LABEL_NAME" Type="varchar2" Nullable="false" MaxLength="150" />
+    <Property Name="TXT_CONF_PARENT_PROPERTY_NAME" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_MAPPING_TYPE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_IS_WORD" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_ZERO_REPLACE" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_BLANK_REPLACE" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_IS_OLD_VALUE" Type="char" MaxLength="1" />
+    <Property Name="YN_RISKED_MAPPED_VALUE" Type="char" MaxLength="1" />
+    <Property Name="TXT_RISK_COMPONENT" Type="varchar2" MaxLength="250" />
+    <Property Name="YN_COVER_MAPPED_VALUE" Type="char" MaxLength="1" />
+    <Property Name="TXT_COVER_COMPONENT" Type="varchar2" MaxLength="250" />
+    <Property Name="YN_LD_MAPPED_VALUE" Type="char" MaxLength="1" />
+    <Property Name="TXT_LD_COMPONENT" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_RISK_GROUP_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_COVER_GROUP_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_LD_GROUP_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_RCLD_COMPONENT" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'INS.WSDL_REPORT_SPECIAL_LABEL' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WSDL_REPORT_SPECIAL_LABEL">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="TXT_SERVICE_TYPE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_SERVICE_TYPE" Type="varchar2" Nullable="false" MaxLength="4" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_PATTERN_NO" Type="number" />
+    <Property Name="NUM_SERIAL_NO" Type="number" />
+    <Property Name="NUM_LABEL_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_LABEL_NAME" Type="varchar2" Nullable="false" MaxLength="150" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="75" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'INS.WSDL_REPORT_TABLE_MAPPING' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="WSDL_REPORT_TABLE_MAPPING">
+    <Key>
+      <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      <PropertyRef Name="NUM_PRODUCT_CODE" />
+      <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+      <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+      <PropertyRef Name="NUM_SERIAL_NO" />
+      <PropertyRef Name="NUM_LABEL_CODE" />
+      <PropertyRef Name="TXT_LABEL_NAME" />
+      <PropertyRef Name="TXT_IS_COLUMN_VISIBLE" />
+      <PropertyRef Name="TXT_RISK_COVER" />
+      <PropertyRef Name="TXT_DISPLAY_TYPE" />
+      <PropertyRef Name="TXT_HAS_PARENT" />
+      <PropertyRef Name="TXT_USER_ID" />
+      <PropertyRef Name="DAT_INSERT_DATE" />
+    </Key>
+    <Property Name="NUM_LINE_OF_BUSINESS_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_PRODUCT_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_REPORT_TYPE_CODE" Type="number" Nullable="false" />
+    <Property Name="NUM_HTML_TEMPLATE_NO" Type="number" Nullable="false" />
+    <Property Name="TXT_WSDL_TYPE" Type="varchar2" MaxLength="3" />
+    <Property Name="NUM_SERIAL_NO" Type="number" Nullable="false" />
+    <Property Name="NUM_LABEL_CODE" Type="number" Nullable="false" />
+    <Property Name="TXT_LABEL_NAME" Type="varchar2" Nullable="false" MaxLength="50" />
+    <Property Name="TXT_TABLE_NAME" Type="varchar2" MaxLength="1000" />
+    <Property Name="NUM_COLUMN_SEQUENCE" Type="number" />
+    <Property Name="TXT_IS_COLUMN_VISIBLE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_COLUMN_HEADING" Type="varchar2" MaxLength="500" />
+    <Property Name="TXT_HEADING_IS_BOLD" Type="char" MaxLength="1" />
+    <Property Name="TXT_HEADING_ALIGMENT" Type="varchar2" MaxLength="6" />
+    <Property Name="TXT_HEADER_WIDTH" Type="varchar2" MaxLength="4" />
+    <Property Name="TXT_RISK_COVER" Type="varchar2" Nullable="false" MaxLength="10" />
+    <Property Name="TXT_COLUMN_NAME" Type="varchar2" MaxLength="1000" />
+    <Property Name="TXT_DATA_TYPE" Type="varchar2" MaxLength="50" />
+    <Property Name="TXT_DATA_FORMAT" Type="varchar2" MaxLength="50" />
+    <Property Name="TXT_CELL_IS_BOLD" Type="char" MaxLength="1" />
+    <Property Name="TXT_CELL_ALIGMENT" Type="varchar2" MaxLength="6" />
+    <Property Name="TXT_DEFAULT_VALUE" Type="varchar2" MaxLength="500" />
+    <Property Name="TXT_WHERE_CLAUSE" Type="varchar2" MaxLength="500" />
+    <Property Name="TXT_ORDER_BY" Type="varchar2" MaxLength="500" />
+    <Property Name="TXT_GROUP_FUNCTION" Type="varchar2" MaxLength="50" />
+    <Property Name="TXT_GROUP_BY" Type="varchar2" MaxLength="500" />
+    <Property Name="TXT_DISPLAY_TYPE" Type="char" Nullable="false" MaxLength="1" />
+    <Property Name="TXT_WSDL_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_HAS_PARENT" Type="varchar2" Nullable="false" MaxLength="2" />
+    <Property Name="TXT_WSDL_PARENT_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_WSDL_CONDITION_PROPERTY" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_WSDL_CONDITION" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_REPLACE_VALUE" Type="varchar2" MaxLength="250" />
+    <Property Name="TXT_USER_ID" Type="varchar2" Nullable="false" MaxLength="150" />
+    <Property Name="DAT_INSERT_DATE" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_WSDL_REPORT_CLAUSE_DTL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.Store.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_CLAUSE_DTL" Type="ConfModel.Store.WSDL_REPORT_CLAUSE_DTL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_CLAUSE_DTL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_CONDITIONAL_MST">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.Store.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_CONDITIONAL_MST" Type="ConfModel.Store.WSDL_REPORT_CONDITIONAL_MST" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_CONDITIONAL_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_GENISYS_WSDL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.Store.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_GENISYS_WSDL" Type="ConfModel.Store.WSDL_REPORT_GENISYS_WSDL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_GENISYS_WSDL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_IMAGE_DTL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.Store.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_IMAGE_DTL" Type="ConfModel.Store.WSDL_REPORT_IMAGE_DTL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_IMAGE_DTL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_MAPPING_TAB">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.Store.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_MAPPING_TAB" Type="ConfModel.Store.WSDL_REPORT_MAPPING_TAB" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_MAPPING_TAB">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WSDL_REPORT_PAGE_LABEL">
+    <End Role="WSDL_REPORT_PRODUCT_MST" Type="ConfModel.Store.WSDL_REPORT_PRODUCT_MST" Multiplicity="1" />
+    <End Role="WSDL_REPORT_PAGE_LABEL" Type="ConfModel.Store.WSDL_REPORT_PAGE_LABEL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PRODUCT_MST">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_PAGE_LABEL">
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK1_WSDL_REPORT_CLAUSE_DTL">
+    <End Role="WSDL_REPORT_PAGE_LABEL" Type="ConfModel.Store.WSDL_REPORT_PAGE_LABEL" Multiplicity="1" />
+    <End Role="WSDL_REPORT_CLAUSE_DTL" Type="ConfModel.Store.WSDL_REPORT_CLAUSE_DTL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WSDL_REPORT_PAGE_LABEL">
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+        <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+        <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+        <PropertyRef Name="TXT_LABEL_NAME" />
+        <PropertyRef Name="NUM_LABEL_CODE" />
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      </Principal>
+      <Dependent Role="WSDL_REPORT_CLAUSE_DTL">
+        <PropertyRef Name="NUM_PRODUCT_CODE" />
+        <PropertyRef Name="NUM_REPORT_TYPE_CODE" />
+        <PropertyRef Name="NUM_HTML_TEMPLATE_NO" />
+        <PropertyRef Name="TXT_LABEL_NAME" />
+        <PropertyRef Name="NUM_LABEL_CODE" />
+        <PropertyRef Name="NUM_LINE_OF_BUSINESS_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
